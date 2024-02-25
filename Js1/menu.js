@@ -28,7 +28,7 @@ $("li.accordion span").click(function () {
       {
         id: "Genese",
         text: "Genèse",
-        href: "./BIBLE/1Genese/1_genese.html",
+        href: "../BIBLE/1Genese/1_genese.html",
         nombreArticles: 2
       },
       {
