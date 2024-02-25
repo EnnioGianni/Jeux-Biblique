@@ -208,3 +208,17 @@
       background-color: #000; /* Optionnel: changez également le fond en noir ou une autre couleur foncée pour un meilleur contraste */
   }
 }
+
+.menu-image {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Pour centrer l'image si nécessaire */
+  margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
+}
+
+/* Exemple de media query pour ajuster le style de l'image sur de petits écrans */
+@media (max-width: 600px) {
+  .menu-image {
+      width: 50%; /* Réduit la taille de l'image sur les petits écrans */
+  }
+}
