@@ -34,7 +34,7 @@
 
 
   
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: white) {
     :root {
       --l: 46%;
     }
