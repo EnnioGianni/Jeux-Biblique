@@ -80,7 +80,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// function toggleMenu() {
-//     const sideMenu = document.getElementById('sideMenu');
-//     sideMenu.classList.toggle('active'); // Active ou désactive la classe 'active'
-// }
