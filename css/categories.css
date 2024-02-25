@@ -114,3 +114,17 @@ h1{
       padding: 8px 16px; /* Plus petit padding pour les petits écrans */
     }
   }
+
+  .menu-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Pour centrer l'image si nécessaire */
+    margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
+  }
+  
+  /* Exemple de media query pour ajuster le style de l'image sur de petits écrans */
+  @media (max-width: 600px) {
+    .menu-image {
+        width: 50%; /* Réduit la taille de l'image sur les petits écrans */
+    }
+  }
