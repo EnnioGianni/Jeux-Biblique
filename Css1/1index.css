@@ -198,3 +198,13 @@
     font-size: smaller;
   }
 }
+/* Media Query pour les appareils de moins de 768px de large */
+@media (max-width: 768px) {
+  body, p, label, a, h2, article, section, header, footer { /* Sélectionnez les éléments que vous voulez modifier */
+      color: white; /* Définit la couleur du texte en blanc */
+  }
+
+  .modal-content, .scroll-container, .scroll-content { /* Ajoutez les classes de vos éléments modaux ou d'autres conteneurs si nécessaire */
+      background-color: #000; /* Optionnel: changez également le fond en noir ou une autre couleur foncée pour un meilleur contraste */
+  }
+}
