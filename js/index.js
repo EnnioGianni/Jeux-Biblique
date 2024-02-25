@@ -73,3 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
         sideMenu.appendChild(a); // Ajout du lien au menu
     });
 });
+
+
+
+
+
+
+
+// function toggleMenu() {
+//     const sideMenu = document.getElementById('sideMenu');
+//     sideMenu.classList.toggle('active'); // Active ou désactive la classe 'active'
+// }
