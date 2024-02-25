@@ -16,86 +16,86 @@ $("li.accordion span").click(function () {
       {
         id: "Index",
         text: "Accueil",
-        href: "../index.html"
+        href: "./index.html"
       },
       {
         id: "Categories",
         text: "Choisissez une catégorie pour commencer à jouer.",
-        href: "../categories.html",
+        href: "./categories.html",
         nombreArticles: 7
 
       },
       {
         id: "Genese",
         text: "Genèse",
-        href: "../BIBLE/1Genese/1_genese.html",
+        href: "../../BIBLE/1Genese/1_genese.html",
         nombreArticles: 2
       },
       {
         id: "Exode",
         text: "Exode",
-        href: "./BIBLE/2Exode/1_exode.html",
+        href: "../../BIBLE/2Exode/1_exode.html",
         nombreArticles: 1
       },
       {
         id: "Nombres",
         text: "Nombres",
-        href: "./BIBLE/Nombres/6_Nombres.html",
+        href: "../../BIBLE/Nombres/6_Nombres.html",
         nombreArticles: 1
       },
       {
         id: "Levitique",
         text: "Levitique",
-        href: "./BIBLE/3Levitique/1_levitique.html",
+        href: "../../BIBLE/3Levitique/1_levitique.html",
         nombreArticles: 1
       },
       {
         id: "Actes",
         text: "Actes",
-        href: "./BIBLE/Actes/10_Actes.html",
+        href: "../../BIBLE/Actes/10_Actes.html",
         nombreArticles: 1
       },
       {
         id: "Femmes dans la Bible",
         text: "Les Femmes dans la Bible",
-        href: "../BIBLE/FemmeDansLaBible/FemmeSommaire.html",
+        href: "../../BIBLE/FemmeDansLaBible/FemmeSommaire.html",
         nombreArticles: 2
       },
       {
         id: "Lieux Bibliques",
         text: "Lieux Bibliques",
-        href: "../BIBLE/Lieux/sommaireLieux.html",
+        href: "../../BIBLE/Lieux/sommaireLieux.html",
         nombreArticles: 3
       },
      
       {
         id: "Enigmes",
         text: "Énigmes",
-        href: "../BIBLE/Enigmes/1_enigmes.html",
+        href: "../../BIBLE/Enigmes/1_enigmes.html",
         nombreArticles: 3
       },
       {
         id: "Quiz",
         text: "Quiz",
-        href: "../BIBLE/Quiz/1_Quiz.html",
+        href: "../../BIBLE/Quiz/1_Quiz.html",
         nombreArticles: 2
       },
       {
         id: "Correspondances",
         text: "Correspondances",
-        href: "../BIBLE/Correspondances/1_correspondaces.html",
+        href: "../../BIBLE/Correspondances/1_correspondaces.html",
         nombreArticles: 2
       },
       {
         id: "Humours",
         text: "Un peu D'humour",
-        href: "../BIBLE/Humours/1_humour.html",
+        href: "../../BIBLE/Humours/1_humour.html",
         nombreArticles: 2
       },
       {
         id: "Devinettes",
         text: "Devinettes",
-        href: "../BIBLE/Devinettes/1_devinettes.html",
+        href: "../../BIBLE/Devinettes/1_devinettes.html",
         nombreArticles: 2
       },
       {
