@@ -1,0 +1,60 @@
+/* Style de base pour le fond de la fenêtre modale */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; /* Fond opaque */
+    padding: 10px 20px; /* Ajustez selon le besoin */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Ombre pour donner de la profondeur */
+    z-index: 1000; /* S'assure que le modal apparaît au-dessus des autres éléments */
+    visibility: visible; /* S'assure que le modal est toujours visible */
+    opacity: 1; /* Pas d'effet d'opacité */
+  }
+  #p{
+    color: #000;
+  }
+  
+  /* Style pour la fenêtre modale elle-même */
+  .modal-content {
+    display: inline-block; /* Permet à la largeur de s'adapter au contenu */
+    text-align: center;
+  }
+  
+  /* Styles pour les boutons */
+  .button, .subscribe-button {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px; /* Ajustez le padding selon le besoin */
+    text-decoration: none;
+    display: inline-block; /* Pour appliquer le padding et marges correctement */
+    margin: 5px; /* Espacement autour des boutons */
+  }
+  
+  #declineButton {
+    background-color: #f44336; /* Couleur de fond différente pour 'Non merci' */
+  }
+  
+  .button:hover, .subscribe-button:hover {
+    background-color: #45a049; /* Couleur de fond au survol pour 'Je m'abonne' */
+  }
+  
+  #declineButton:hover {
+    background-color: #d32f2f; /* Couleur de fond au survol pour 'Non merci' */
+  }
+  
+  
+  /* Ajoute un peu d'espace autour des boutons */
+  .button, .subscribe-button {
+    margin: 5px;
+  }
+  
+  /* Assure que le modal est visible dès le chargement de la page sans animation */
+  .modal-background {
+    visibility: visible;
+    opacity: 1;
+  }
+  

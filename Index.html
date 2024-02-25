@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Biblique</title>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./Css1/1index.css">
+    <link rel="stylesheet" href="./Css1/modale1.css">
+    <script src="./Js1/inscription.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+ 
+<div class="modal-background" id="subscribeModal">
+  <div class="modal-content">
+    <p id="p">Abonne-toi pour ne rien manquer !</p>
+    <button id="declineButton" class="button">Non merci</button>
+    <a href="./inscription.html" class="subscribe-button">Je m'abonne</a>
+    <!-- Nouvel élément pour les utilisateurs déjà inscrits -->
+    <p style="color: black;">Déjà inscrit ? <button id="loginButton" class="button">Connectez-vous</button></p>
+  </div>
+</div>
+
+<!-- Modale de connexion -->
+<div class="modal-background" id="loginModal" style="visibility: hidden; opacity: 0;">
+  <div class="modal-content">
+    <form id="loginForm">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+      <button type="submit">Se connecter</button>
+      <button type="button" id="closeLoginModal" class="button">Fermer</button>
+    </form>
+  </div>
+</div>  
+  
+  
+<article class="container">
+    <section class="intro flow">
+      <h2>Jeu Biblique<br>Testez Votre Connaissance de la Bible</h2>
+      <p>
+        Bienvenue dans notre jeu biblique interactif, conçu pour enrichir votre connaissance des histoires et personnages de la Bible de manière ludique. Que vous soyez passionné par la Bible ou simplement curieux, ce jeu vous invite à explorer ses enseignements et récits captivants. Choisissez votre mode de jeu, solo pour une exploration personnelle ou compétitif pour un défi entre proches, et lancez-vous dans une aventure qui vous fera découvrir les trésors spirituels et culturels de la Bible. Préparez-vous à une expérience enrichissante, ouvrant votre esprit et cœur aux leçons profondes de ce texte ancien.
+      </p>
+   
+
+      
+      <button><a href="./categories.html">Individuel &#x1F59D;</a></button>
+      <button><a href="./score.html">En groupe &#x1F59D;</a></button>
+    </section>
+    <section class="details">
+      <header style="font-size: 20px;">Explication du jeu.</header>
+      
+      <div class="scroll-container">
+        <article class="scroll-content">
+            <p>Vous avez devant vous un jeu-questionnaire passionnant basé sur la Bible. C'est un défi conçu spécialement pour vous, pour tester vos connaissances sur les histoires, les personnages, et les enseignements de la Bible, tout en vous amusant. Voici comment ça fonctionne :
+            </p>
+              <ol>
+                <li><b>Début :</b> On te présente une série de 10 questions. Chaque question explore un aspect différent de la Bible, te donnant l'opportunité de montrer ce que tu sais.
+                </li><br>
+                <li><b>Le Chronomètre :</b> Pour chaque question, tu as 20 secondes pour choisir ta réponse. C'est rapide, donc tu dois être à la fois rapide et précis dans tes réponses.</li><br>
+                <li><b>Feedback Immédiat :</b>Après avoir choisi ta réponse, tu sauras immédiatement si tu as raison ou non. Si ta réponse est correcte, la 
+                    question s'illumine en vert; sinon, elle devient rouge. Cela te permet de savoir sur quels aspects de la Bible tu es solide et lesquels tu pourrais vouloir réviser.</li><br>
+                <li><b>Score :</b> À la fin des 10 questions, ton score total s'affiche. C'est ta chance de voir combien de réponses correctes tu as 
+                    obtenues sur 10.
+                </li><br>
+                <li><b>Rejouer ou Progresser :</b> Une fois le quiz terminé, tu peux choisir de rejouer le même ensemble de questions pour améliorer ton 
+                    score ou de passer à un nouveau set pour continuer à tester et à étendre tes connaissances.
+                </li><br>
+                <li><b>Explorer Plus :</b>Une fois que tu as terminé ton quiz et vu ton score, tu n'as pas à t'arrêter là. Tu as l'option de passer à une 
+                    autre série de questions. Cela signifie que tu peux continuer à tester tes connaissances sur différents aspects de la Bible, allant de questions sur des histoires spécifiques à des enseignements plus profonds. Chaque série de questions est une nouvelle opportunité d'apprendre et de découvrir. Que tu cherches à te spécialiser dans un livre particulier de la Bible ou que tu veuilles avoir une compréhension plus large, il y a toujours plus à explorer. Cela rend le jeu infiniment rejouable et enrichissant, te permettant de continuer à grandir dans ta compréhension et ton appréciation de la Bible.
+                </li><br>
+                <li>Le jeu-questionnaire sur la Bible est conçu pour être joué soit individuellement, soit en groupe, offrant une expérience 
+                    personnalisable et interactive. À la fin de chaque session, vous pouvez suivre un lien menant à une page dédiée à l'enregistrement des scores. Cela permet à chaque joueur ou équipe de noter le résultats, favorisant ainsi un esprit de compétition sain ou simplement le suivi des progrès personnels.
+                </li>
+                <li>Mais aussi, avant de plonger dans le défi des questions, de la page d'accueil, vous avez la possibilité de marquer le coup d'envoi en 
+                    inscrivant les noms des joueurs ou des équipes sur cette page. Cette étape initiale prépare le terrain pour une aventure collective ou un défi personnel, selon votre choix de mode de jeu.
+                </li>
+                <li>En résumé, le jeu-questionnaire sur la Bible est une invitation à explorer les textes sacrés de manière ludique et interactive, seul ou 
+                    accompagné, tout en offrant la possibilité de mesurer vos connaissances et de les partager avec d'autres. Préparez-vous à une aventure enrichissante, pleine de découvertes et d'échanges.
+                </li>
+                
+              </ol> 
+        </article>
+      </div>
+      <footer> &copy Tout droit réservé</footer>
+    </section>
+  </article>
+</body>
+</html>
+

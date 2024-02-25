@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Dynamique</title>
+    <link rel="stylesheet" href="./css/score.css">
+    <link rel="stylesheet" href="../../css/cruiz.css">
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger-menu close-menu"  onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+<!--Menu-->
+            <nav class="side-menu" id="sideMenu">
+            <!-- Image dans le menu -->
+            <img src="/Images/Bible2.jpg" alt="Bible" class="menu-image">
+            <!-- Les liens seront ajoutés ici par le script JavaScript -->
+            </nav>
+<!--Fin Menu-->        
+    </header> 
+        <h2 style="color: aliceblue; font-size: 35px;">Marquez vos points ici et continuez à jouer</h2>
+            <a href="./categories.html" style="color: rgb(8, 8, 8); padding: 5px 10px 5px 10px;">Marquez vos noms dans les cases noirs,<br> ou vos points 
+                et commencés, ou continuez à jouer en cliquant sur ce lien.&nbsp;<i class="fab fa-youtube"></i>
+            </a>  
+    <div id="tableau"></div>
+    <script src="./js/score.js"></script>
+</body>
+</html>

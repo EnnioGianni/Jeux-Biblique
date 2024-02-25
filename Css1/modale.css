@@ -1,0 +1,432 @@
+/* Décrire l'animation */
+@keyframes slideDownFadeIN {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* Foncer l'arrière-plan de la fenêtre modale */
+.modal {
+  display: none; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* la fenêtre modale  */
+.modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Le contenu de la modale */
+.modal-dialog .modal-content {
+  margin: auto;
+  background-color: #f3f3f3;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+  animation-name: slideDownFadeIN;
+  animation-duration: 0.5s;
+}
+
+/* Bouton servant à fermer la fenêtre modale */
+.closebtn {
+  text-decoration: none;
+  float: right;
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: #fff;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+header {
+  background-color: #7d7c7c;
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  background-color: #7d7c7c;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+/*Debut 7 popup*/
+/* body {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    background: #ccc;
+  padding:30px;
+} */
+.popup-link{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+
+.popup-link a{
+    background: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size:10px;
+    cursor:pointer;
+    margin:20px;
+    text-decoration:none;
+}
+
+.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    display: flex;
+    align-items: center;
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    overflow: auto;
+}
+.popup-content p{
+    font-size: 20px;
+    padding: 10px;
+    line-height: 22px;
+
+}
+.popup-content a.close{
+    color: #f80505;
+    float: right;
+    font-size: 20px;
+    /* font-weight: bold; */
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration:none;
+}
+
+.popup-content a.close:hover{
+  color:#333;
+}
+
+.popup-content span:hover,
+.popup-content span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-container:target{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-container h3{
+  margin:10px;
+}
+/*End popup styles*/
+
+ Additional styles 
+.popup-style-2{
+  transform: scale(0.3);
+  
+}
+
+.popup-style-2:target{
+  transform: scale(1);
+}
+
+.popup-style-3{
+  left:100%;
+  
+}
+
+.popup-style-3:target{
+  left:0;
+}
+
+.popup-style-4{
+  transform: rotate(180deg);
+}
+
+.popup-style-4:target{
+  transform: rotate(0deg);
+}
+
+.popup-style-5{
+  top:100%;
+  
+}
+
+.popup-style-5:target{
+  top:0;
+}
+
+.popup-style-6{
+  transform: scale(15.3);
+  
+}
+
+.popup-style-6:target{
+ transform: scale(1);
+ }
+
+.popup-style-7{
+  transform: skewY(180deg);
+   transition: all 0.7s ease-in-out;
+}
+
+.popup-style-7:target{
+ transform: skewY(0deg);
+
+ }
+
+
+
+
+ .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fea251;
+  min-width: 192px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  border-color:  blue;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+  margin: 37px 0 0 -0px;
+  width: 92px;
+  text-align: center;
+
+}
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: #fea251;
+  min-width: 83px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  border-color:  rgb(255, 81, 0);
+  text-align: center;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/*Texte clignottant*/
+#a  {
+  animation-duration: .8s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+  color:#f50606;
+
+}
+@keyframes clignoter {
+ 0%   { color:#000000; }
+ 40%   {color:#090909; }
+ 100% { opacity:#000000; }
+}
+
+
+
+/* Animation pulsate */
+@keyframes pulsate {
+  0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ombre initiale */
+  }
+  50% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Ombre agrandie à mi-chemin */
+  }
+  100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ombre de retour à la fin */
+  }
+}
+
+
+
+
+
+.modal-bienvenue {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fbe6d2;
+  margin: 2% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 54%;
+  text-align: center;
+  max-height: 100vh; /* Hauteur maximale de 70% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */ 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+      width: 90%;
+      margin: 20% auto;
+  }
+}
+
+/* title-tip down */
+.title-tip[title]:hover {
+  position: relative;
+}
+.title-tip[title]:hover:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99999;
+  content: attr(title);
+  margin-top: 0.5em;
+  padding: 0.5em;
+  width: 200px;    /* change it */
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: inherit;
+  color: #FFF;
+  text-align: center;
+  background-color: #222;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.title-tip[title]:hover:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 99999;
+  content: '';
+  margin-left: -0.125em;
+  width: 0;
+  height: 0;
+  border: 0.25em dashed transparent;
+  border-bottom: 0.25em solid #222;
+  font-size: inherit;
+}
+
+/* title-tip-up */
+.title-tip-up[title]:hover:before {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.title-tip-up[title]:hover:after {
+  top: auto;
+  bottom: 100%;
+  border: 0.25em dashed transparent;
+  border-top: 0.25em solid #222;
+}
+
+/* title-tip-right */
+.title-tip-right[title]:hover:before {
+  top: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0.5em;
+}
+.title-tip-right[title]:hover:after {
+  top: 50%;
+  left: 100%;
+  margin-left: 0;
+  margin-top: -0.125em;
+  border: 0.25em dashed transparent;
+  border-right: 0.25em solid #222;
+}
+
+/* title-tip-left */
+.title-tip-left[title]:hover:before {
+  top: auto;
+  left: auto;
+  right: 100%;
+  margin-top: 0;
+  margin-right: 0.5em;
+}
+.title-tip-left[title]:hover:after {
+  top: 50%;
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-top: -0.125em;
+  border: 0.25em dashed transparent;
+  border-left: 0.25em solid #222;
+}
+
+

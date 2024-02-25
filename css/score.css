@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
+
+}
+
+table {
+    width: 100%; /* S'assure que le tableau utilise toute la largeur disponible */
+    max-width: 100%; /* Prévient le dépassement du tableau */
+    border-collapse: collapse;
+    margin: 20px 0; /* Espacement autour du tableau */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    min-width: 60px; /* Assure un minimum de visibilité pour le contenu */
+    height: auto; /* Permet aux cellules de s'ajuster en hauteur selon le contenu */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Gère le texte débordant */
+    color: #fcfafa;
+    font-size: 1.5em;
+}
+h1{
+color: #000;
+}
+h2{
+    color: white;
+}
+p{color: #000;}
+
+/* Styles pour les premières cellules de chaque ligne */
+.color-1 { background-color: #0a0a0a; }
+.color-2 { background-color: #0a0a0a; }
+.color-3 { background-color: #0a0a0a; }
+.color-4 { background-color: #0a0a0a; }
+.color-5 { background-color: #0a0a0a; }
+.color-6 { background-color: #0a0a0a; }
+.color-7 { background-color: #0a0a0a; }
+.color-8 { background-color: #0a0a0a; }
+.color-9 { background-color: #0a0a0a; }
+.color-10 { background-color: #0a0a0a; }
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    th, td {
+        padding: 4px; /* Réduit le padding */
+        min-width: 40px; /* Réduit la largeur minimum pour économiser l'espace */
+        font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustements supplémentaires pour les très petits écrans */
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 2px; /* Padding encore plus réduit */
+        min-width: 30px; /* Plus petite largeur minimum pour maximiser l'espace */
+        font-size: 10px; /* Taille de police réduite pour les très petits écrans */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

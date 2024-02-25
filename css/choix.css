@@ -1,0 +1,204 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
+    /* background-color: #1a1a1a; */
+    color: #0d0d0d;
+}
+
+
+.container {
+    background-color: #d8a761;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 10px solid #d8a761;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+h1 {
+    color: #333;
+    margin: -110px 0 0 0;
+    text-align: center;
+    font-size:1.5em;
+
+}
+
+label {
+    display: block;
+    margin: 15px;
+    color: #070707;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 70px 0 0  -100;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+p {
+    font-size:  15px;
+    margin: 0 120px 10px 120px;
+   /* text-underline-offset: 10px; */
+}
+#p{
+    text-align: center;
+    /* line-height : normal; */
+    line-height : 5px;
+    /* line-height : 1.5; */
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 0 0 0;
+    text-align: center;
+    
+
+}
+.btn{
+    background-color: #0068B1; 
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px; 
+    width: 200px;
+    border-radius: 10px;
+    
+  }
+  
+  .btn:hover{
+    background-color: #408EC5;
+  }
+
+
+.button:hover {
+    background-color: #0056b3;
+    
+}
+
+/* Styles pour rendre la page responsive */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+
+
+
+
+/* Styles pour le menu hamburger */
+.hamburger-menu {
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fcfbfb;
+    margin: 5px 0 0 15px;
+    transition: 0.4s;
+}
+
+/* Styles pour le menu latéral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Démarre hors de l'écran, à gauche */
+    width: 250px;
+    height: 100%;
+    background: #f9e4c1;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 60px;
+    transition: 0.5s; /* Animation douce */
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #464646;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+    background-color: #575757;
+}
+
+/* Style pour l'image dans le menu */
+.menu-image {
+    width: 100%; /* Assure que l'image s'adapte à la largeur du menu */
+    max-height: 150px; /* Hauteur maximale de l'image */
+    object-fit: cover; /* S'assure que l'image couvre bien l'espace sans se déformer */
+    margin-bottom: -20px; /* Espace sous l'image */
+    margin: -40px 0 10px 0;
+}
+
+.side-menu {
+    /* ... Autres styles ... */
+    left: -250px; /* Position initiale fermée */
+    
+}
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}

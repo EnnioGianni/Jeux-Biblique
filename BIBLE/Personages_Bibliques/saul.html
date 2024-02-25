@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux bibliques</title>
+    <link rel="stylesheet" href="../../css/cruiz.css">
+    <script src="./PersonagesJS/saul.js" defer></script>
+    <script src="../../js/bible.js" defer></script>
+    <!-- <script src="../../js/menuGenese.js" defer></script> -->
+  </head>
+  <body>
+  <header class="header">
+    <div class="hamburger-menu close-menu"  onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+<!--Menu-->
+<nav class="side-menu" id="sideMenu">
+<!-- Image dans le menu -->
+<img src="/Images/Bible2.jpg" alt="Bible" class="menu-image">
+<!-- Les liens seront ajoutés ici par le script JavaScript -->
+</nav>
+<!--Fin Menu-->        
+</header>
+
+  <div class="start-screen">
+    <button id="start-button">Saül</button>
+  </div>
+  <div id="wrapper">
+    <div id="display-container">
+      <h1>Saül</h1>
+      <div class="header">
+        <div class="number-of-count">
+          <span class="number-of-question"></span>
+        </div>
+        <div class="timer-div">
+          <img src="https://svgshare.com/i/iRM.svg" />
+          <span class="time-left"></span>
+        </div>
+      </div>
+      <div id="container">
+        <!-- Question and options are displayed here -->
+      </div>
+      <div class="btn-container">
+        <button id="next-button">Question suivante</button>
+      </div>
+    </div>
+    <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->
+  </div>
+  <div class="score-container hide">
+    <div id="user-score"></div>
+    <button id="restart">Redémarrer</button>
+    <a href="../../categories.html" style="width: auto; height: 45px; padding: 10px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
+    <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
+  </div>
+</body>
+</html>

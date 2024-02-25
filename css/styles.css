@@ -1,0 +1,178 @@
+#body{
+    background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
+}
+h1 {
+    font-family:'Gabriola', serif;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+li {
+    font-family:'Cambria', serif;
+    font-size: 1.5em;
+}
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+}
+p {
+    font-family:'Gabriola', serif;
+}
+/* Quiz Classes */
+ .quizContainer {
+    background-color: rgb(255, 253, 253);
+    border-radius: 6px;
+    width: 75%;
+    margin: auto;
+    padding-top: 5px;
+    /*-moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;*/
+    position: relative;
+    margin: 20px;
+}
+.quizcontainer #quiz1
+{
+text-shadow:1px 1px 2px orange;
+font-family:"Georgia", Arial, sans-serif;
+}
+.nextButton {
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 6px;
+   /* width: 150px;*/
+    height: 40px;
+    text-align: center;
+    background-color: lightgrey;
+    /*clear: both;*/
+    color: red;
+    font-family:'Gabriola', serif;
+    position: relative;
+    margin: auto;
+	font-size:25px;
+	font-weight:bold;
+    padding-top: 5px;
+	float:right;
+	right:30%;
+}
+
+.preButton {
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 6px;
+    /*width: 150px;*/
+    height: 40px;
+    text-align: center;
+    background-color: lightgrey;
+    /*clear: both;*/
+    color: red;
+    font-family:'Gabriola', serif;
+    position: relative;
+    margin: auto;
+	font-size:25px;
+	font-weight:bold;
+    padding-top: 5px;
+	float:left;
+	left:30%;
+}
+
+.question {
+    font-family:'Century', serif;
+    font-size: 1.5em;
+	font-weight:bold;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 6px;
+    background-color: #f3dc45;
+    text-align: center;
+}
+.quizMessage {
+    background-color: peachpuff;
+    border-radius: 6px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+	font-size:20px;
+	font-weight:bold;
+    font-family:'Gabriola', serif;
+    color: red;
+	position:absolute;
+	top:80%;
+	left:40%;
+}
+.choiceList {
+    font-family: 'Arial', serif;
+    color: #ed12cd;
+	font-size:15px;
+	font-weight:bold;
+}
+.result {
+    width: 40%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+	color:green;
+    text-align: center;
+	font-size:25px;
+    font-family:'Verdana', serif;
+	font-weight:bold;
+	position:absolute;
+	top:80%;
+	left:30%;
+}
+/* End of Quiz Classes */
+
+/* Menu hamburger visible sur tous les écrans et positionné à droite dans l'en-tête */
+.hamburger-menu {
+    display: flex; /* Rend le menu hamburger visible sur tous les écrans */
+    cursor: pointer;
+    position: absolute; /* Position absolue par rapport à son parent '.header' */
+    top: 11px; /* Ajustement vertical pour s'aligner correctement dans l'en-tête */
+    right: 30px; /* Ajustement horizontal pour le positionner à droite */
+    z-index: 3; /* S'assure que le menu hamburger est cliquable */
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Largeur du menu hamburger */
+    height: 25px; /* Hauteur du menu hamburger */
+}
+
+.bar {
+    height: 3px; /* Hauteur de chaque barre */
+    width: 100%; /* Largeur de chaque barre */
+    background-color: #faf7f7; /* Couleur des barres */
+    border-radius: 12px; /* Arrondit les bords des barres */
+}
+
+/* Menu latéral */
+.side-menu {
+    position: fixed;
+    width: 250px;
+    left: -250px; /* Position de départ hors de l'écran */
+    top: 0;
+    height: 100%;
+    background-color: #f2d2a0; /* Couleur de fond du menu latéral */
+    z-index: 1;
+    transition: left 0.3s ease; /* Animation pour l'affichage du menu */
+    padding-top: 60px; /* Espace pour l'image du menu */
+    text-align: center;
+}
+
+.side-menu img {
+    width: 100%;
+    height: auto; /* S'assure que l'image est bien ajustée */
+}
+
+.menu-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333; /* Couleur des liens dans le menu */
+}

@@ -1,0 +1,132 @@
+/* Réinitialisation et styles de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Taille de police de base */
+    line-height: 1.6; /* Espacement entre les lignes */
+    background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
+}
+
+/* En-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fbfbfb; Couleur de fond de l'en-tête */
+    padding: 20px 20px; /* Padding spécifié pour l'en-tête */
+    position: relative; /* Nécessaire pour le positionnement absolu du menu hamburger */
+    z-index: 2; /* S'assure que l'en-tête reste au-dessus du contenu de la page */
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4d4c4c; /* Couleur de fond de l'en-tête */
+    padding: 20px 20px; /* Padding spécifié pour l'en-tête */
+    position: relative; /* Nécessaire pour le positionnement absolu du menu hamburger */
+    z-index: 2; /* S'assure que l'en-tête reste au-dessus du contenu de la page */
+}
+h1{
+    text-align: center;
+    margin: -200px 0 10px 0;
+}
+
+/* Menu hamburger visible sur tous les écrans et positionné à droite dans l'en-tête */
+.hamburger-menu {
+    display: flex; /* Rend le menu hamburger visible sur tous les écrans */
+    cursor: pointer;
+    position: absolute; /* Position absolue par rapport à son parent '.header' */
+    top: 11px; /* Ajustement vertical pour s'aligner correctement dans l'en-tête */
+    right: 30px; /* Ajustement horizontal pour le positionner à droite */
+    z-index: 3; /* S'assure que le menu hamburger est cliquable */
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Largeur du menu hamburger */
+    height: 25px; /* Hauteur du menu hamburger */
+}
+
+.bar {
+    height: 3px; /* Hauteur de chaque barre */
+    width: 100%; /* Largeur de chaque barre */
+    background-color: #faf7f7; /* Couleur des barres */
+    border-radius: 12px; /* Arrondit les bords des barres */
+}
+
+/* Menu latéral */
+.side-menu {
+    position: fixed;
+    width: 250px;
+    left: -250px; /* Position de départ hors de l'écran */
+    top: 0;
+    height: 100%;
+    background-color:#d8a761;
+    z-index: 1;
+    transition: left 0.3s ease; /* Animation pour l'affichage du menu */
+    padding-top: 60px; /* Espace pour l'image du menu */
+    text-align: center;
+}
+
+.side-menu img {
+    width: 100%;
+    height: auto; /* S'assure que l'image est bien ajustée */
+}
+
+.menu-link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333; /* Couleur des liens dans le menu */
+}
+
+Conteneur principal
+.container {
+    background-image: url('/Images/Bible2.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre entièrement le conteneur */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    min-height: 700px; /* Hauteur minimale pour couvrir la fenêtre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 10px solid #d8a761; /* Bordure solide autour du conteneur */
+    border-radius: 20px; /* Bords arrondis */
+    max-width: 800px; /* Largeur maximale */
+    margin: 50px auto; /* Centré avec marge au-dessus et en dessous */
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+}
+
+/* Boutons */
+.button {
+    background-color: #4CAF50; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 14px 20px; /* Espacement intérieur */
+    margin: 10px 0; /* Marge autour du bouton */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    text-decoration: none; /* Pas de décoration de texte */
+}
+
+.button:hover {
+    background-color: #367a37; /* Changement de couleur au survol */
+}
+
+/* Overlay pour le menu (si utilisé) */
+#overlay {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    width: 100%; /* Largeur complète */
+    height: 100%; /* Hauteur complète */
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+    z-index: 0; /* En arrière-plan par rapport au contenu */
+}

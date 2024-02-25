@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux bibliques</title>
+    <link rel="stylesheet" href="../../css/cruiz.css">
+    <script src="../Lieux/LieuxJS/jericho.js" defer></script>
+    <script src="../../js/bible.js" defer></script>
+    <!-- <script src="../../js/menuGenese.js" defer></script> -->
+  </head>
+  <body style="background: url(./Images/Jéricho.png) center center / cover no-repeat fixed; ">
+  <header class="header" style="background-color: rgb(88, 87, 87);">
+    <div class="hamburger-menu close-menu"  onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+<!--Menu-->
+<nav class="side-menu" id="sideMenu">
+<!-- Image dans le menu -->
+<img src="./Images/UR.jpg" alt="Bible" class="menu-image">
+<!-- Les liens seront ajoutés ici par le script JavaScript -->
+</nav>
+<!--Fin Menu-->        
+</header>
+
+  <div class="start-screen">
+    <button id="start-button" style="margin: -500px 500px 0 600px; padding: 0px 10px 10px 10px;">
+        <h3 style="margin: 5px 0 5px;">Jéricho &#x1F59D;</h3>
+        <p style="text-align: center; color: #000;">
+            La ville de Jéricho en pleine oasis est restée célèbre dans l’Ancien Testament pour ses hauts remparts s’effondrant au son des trompettes ; des assaillants israélites menés par Josué viennent de prendre la ville pourtant puissamment fortifiée. Mais Jéricho, c’est aussi avec le Nouveau Testament, la guérison miraculeuse d’un aveugle par Jésus, la conversion de Zachée perché sur son sycomore…
+        </p>
+    </div>
+  <div id="wrapper">
+    <div id="display-container">
+      <h1>Jéricho</h1>
+      <div class="header">
+        <div class="number-of-count">
+          <span class="number-of-question"></span>
+        </div>
+        <div class="timer-div">
+          <img src="https://svgshare.com/i/iRM.svg" />
+          <span class="time-left"></span>
+        </div>
+      </div>
+      <div id="container">
+        <!-- Question and options are displayed here -->
+      </div>
+      <div class="btn-container">
+        <button id="next-button">Question suivante</button>
+      </div>
+    </div>
+    <!-- <a href="#">Série de questions suivantes&nbsp;<i class="fab fa-youtube"></i></a> -->
+  </div>
+  <div class="score-container hide">
+    <div id="user-score"></div>
+    <button id="restart">Redémarrer</button>
+    <a href="../../categories.html" style="width: auto; height: 45px; padding: 10px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
+    <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
+    <a href="../../categories.html">Categories&nbsp;<i class="fab fa-youtube"></i></a>
+  </div>
+</body>
+</html>

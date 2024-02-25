@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Utilise 100% de la hauteur de la fenêtre de visualisation */
+    margin: 0; /* Enlève les marges par défaut */
+    background-image: url('../Images/Ciel.jpg'); /* Ajustez le chemin */
+    background-size: cover; /* Couvre toute la page sans étirer l'image */
+    background-position: center; /* Centre l'image d'arrière-plan */
+}
+
+.inscription-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* Légèrement transparent */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 480px) {
+    .inscription-container {
+        padding: 10px;
+        margin: 10px;
+    }
+}
