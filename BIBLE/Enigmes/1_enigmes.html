@@ -8,6 +8,34 @@
     <script src="../Enigmes/enigmesJS/1_enigmes.js" defer></script>
     <script src="../../js/bible.js" defer></script>
     <!-- <script src="../../js/menuGenese.js" defer></script> -->
+    <style>
+      .start-screen {
+    display: flex;
+    flex-direction: column; /* Assure que les éléments s'alignent verticalement */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 15px; /* Ajoute 15px de plus au haut, ajustez selon vos besoins */
+}
+
+/* Pour rendre le texte à l'intérieur du bouton responsive */
+#start-button {
+    width: 60%; /* Définit une largeur initiale pour le bouton */
+    max-width: 600px; /* S'assure que le bouton ne devient pas trop large sur les grands écrans */
+    margin: 100px 0 0; /* Pousse le bouton vers le bas et le centre verticalement */
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #start-button {
+        width: 80%; /* Augmente la largeur du bouton sur les petits écrans */
+        margin-top: 15px; /* Ajuste la marge supérieure pour les petits écrans */
+        font-size: 0.9rem; /* Ajuste la taille de la police si nécessaire */
+    }
+}
+
+    </style>
   </head>
   <body style="background: url(./Images/1.jpg) center center / cover no-repeat fixed; ">
     <header class="header">
