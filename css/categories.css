@@ -130,7 +130,27 @@ h1{
   }
 
 
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+  th, td {
+      padding: 4px; /* Réduit le padding */
+      min-width: 40px; /* Réduit la largeur minimum pour économiser l'espace */
+      font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
+  }
+}
 
+@media (max-width: 480px) {
+  /* Ajustements supplémentaires pour les très petits écrans */
+  table {
+      width: 100%;
+  }
+
+  th, td {
+      padding: 2px; /* Padding encore plus réduit */
+      min-width: 30px; /* Plus petite largeur minimum pour maximiser l'espace */
+      font-size: 10px; /* Taille de police réduite pour les très petits écrans */
+  }
+}
 
 
 
