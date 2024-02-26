@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Définition des liens du menu
     var menuLinks = [
         { href: "./", text: "Accueil" },
-        { href: "../choix.html", text: "Choix" },
-        { href: "../BIBLE/bibleSommaire.html", text: "Sommaire Bible" },
-        { href: "../categories.html", text: "Categories" },
-        { href: "../score.html", text: "Score" },
+        { href: "./choix.html", text: "Choix" },
+        { href: "./BIBLE/bibleSommaire.html", text: "Sommaire Bible" },
+        { href: "./categories.html", text: "Categories" },
+        { href: "./score.html", text: "Score" },
         // Ajoutez d'autres liens ici selon vos besoins
     ];
 
