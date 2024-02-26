@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Définition des liens du menu
     var menuLinks = [
-        { href: "../index.html", text: "Accueil" },
+        { href: "./", text: "Accueil" },
         { href: "../choix.html", text: "Choix" },
         { href: "../BIBLE/bibleSommaire.html", text: "Sommaire Bible" },
         { href: "../categories.html", text: "Categories" },

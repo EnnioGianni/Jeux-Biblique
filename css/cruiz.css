@@ -363,6 +363,22 @@ h1{
         font-size: 0.9rem; /* Ajuste la taille de la police si nécessaire */
     }
 }
+/* Pour rendre le texte à l'intérieur du bouton responsive */
+#start-button1 {
+    width: 60%; /* Définit une largeur initiale pour le bouton */
+    max-width: 600px; /* S'assure que le bouton ne devient pas trop large sur les grands écrans */
+    margin: 100px 0 0; /* Pousse le bouton vers le bas et le centre verticalement */
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #start-button1 {
+        width: 80%; /* Augmente la largeur du bouton sur les petits écrans */
+        margin-top: 15px; /* Ajuste la marge supérieure pour les petits écrans */
+        font-size: 0.9rem; /* Ajuste la taille de la police si nécessaire */
+    }
+}
 
 
 
