@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             subcategories: [
                 { name: "1 Humours", url: "./BIBLE/Humours/1_humour.html" },
                 { name: "2 Humours", url: "./BIBLE/Humours/2_humour.html" },
+                { name: "3 Humours", url: "./BIBLE/Humours/3_humour.html" },
         ]
         },
         {

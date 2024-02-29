@@ -16,98 +16,97 @@ let scoreCount = 0;
 let count = 21;
 let countdown;
 
-//Tableau de questions et d’options
 // Ajoutez des questions, des options et corrigez l’option dans le format ci-dessous
 const quizArray = [
 	{
 		id: "0",
-		question: "Quel animal utilise Internet sans jamais payer d'abonnement ?",
-		options: ["Le chat.", 
-				  "L'escargot.", 
-				  "Le pigeon voyageur.", 
-				  "La souris."],
-		 correct: "La souris."
+		question: "Que faut-il faire à la fois pour la barbe du père Noël et un arbre ?",
+		options: ["Nécessite un entretien régulier.", 
+				  "Implique un acte de coupe.", 
+				  "Ils faut tailler les deux.", 
+				  "Fait partie de l'entretien esthétique ou de croissance."],
+		 correct: "Ils faut tailler les deux."
 	},
 	{
 		id: "1",
-		question: "Quel est le comble pour un électricien ?",
-		options: ["De ne pas être au courant.", 
-				  "De prendre un choc électrique.", 
-				  "De travailler sous tension.", 
-				  "De perdre le fil."],
-		 correct: "De ne pas être au courant."
+		question: "Comment le boulanger organise-t-il ses pains au chocolat ?",
+		options: ["Selon une méthode de tri spécifique.", 
+				  "En utilisant un critère de taille.", 
+				  "Par ordre croissant.", 
+				  "De manière à faciliter le choix des clients."],
+		 correct: "Par ordre croissant."
 	},
 	{
 		id: "2",
-		question: "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ?",
-		options: ["Parce que sinon, ils tombent encore dans le bateau.", 
-				  "Pour mieux voir le ciel.", 
-		          "Par tradition.", 
-		          "Pour impressionner les poissons."],
-		 correct: "Parce que sinon, ils tombent encore dans le bateau."
+		question: "Quelle est la boisson préférée de Teddy Riner ?",
+		options: ["Une boisson très légère.", 
+				  "Pas une boisson énergétique.", 
+		          "Le jus d’eau.", 
+		          "L'eau."],
+		 correct: "Le jus d’eau."
 	},
 	{
 		id: "3",
-		question: "Pourquoi les vampires suivent-ils des cours du soir ?",
-		options: ["Ils ne supportent pas la lumière du jour.", 
-			      "Ils veulent apprendre à compter.", 
-			      "Ils préparent un master en hémoglobine.", 
-			      "Ils veulent rester à la mode."],
-		correct: "Ils ne supportent pas la lumière du jour."
+		question: "Quel est le comble pour un cycliste ?",
+		options: ["Perdre les pédales.", 
+			      "Roulée à roux libre.", 
+			      "Crevée avant de partir.", 
+			      "De faire un régime sans selle."],
+		 correct: "De faire un régime sans selle."
 	},
 	{
 		id: "4",
-		question: "Pourquoi les cyclones travaillent-ils gratuitement ?",
-		options: ["Ils sont dans le vent.", 
-				  "Ils suivent juste leur passion.", 
-				  "Ils tournent autour du pot.", 
-				  "Ils ont un tourbillon d'idées."],
-		 correct: "Ils sont dans le vent."
+		question: "Qu’est-ce qui est orange et qui va très vite dans la rue ?",
+		options: ["Un fruit en mouvement.", 
+				  "Un agrume en déplacement.", 
+				  "Un agrume pressé par le temps.", 
+				  "Une orange pressée."],
+		 correct: "Une orange pressée."
 	},
 	{
 		id: "5",
-		question: "Pourquoi les abeilles ont-elles un bon sens de l'organisation ?",
-		options: ["Elles ont un bon leader.", 
-				  "Elles travaillent toujours en buzz-iness.", 
-				  "Elles aiment faire des listes.", 
-				  "Elles suivent toujours le plan."],
-		 correct: "Elles travaillent toujours en buzz-iness.",
+		question: "Quel est le dessert préféré d’un cannibale ?",
+		options: ["Un petit suisse.", 
+				  "Un Camembert.", 
+				  "Chèvre frais.", 
+				  "Un parachute."],
+		 correct: "Un petit suisse.",
 	},
 	{
 		id: "6",
-		question: "Pourquoi les plantes détestent-elles les mathématiques ?",
-		options: ["Elles trouvent ça trop complexe.", 
-				  "Elles ont du mal avec les racines carrées.", 
-				  "Elles n'aiment pas compter.", 
-				  " Elles préfèrent la biologie."],
-		correct:  "Elles ont du mal avec les racines carrées."
+		question: "Qu'est-ce qui est jaune et qui attend ?",
+		options: ["Une banane au repos.", 
+				  "Un citron pas pressé.", 
+				  "Un poussin immobile.", 
+				  "Une étoile fixe."],
+		correct:  "Un citron pas pressé."
 	},
 	{
 		id: "7",
-		question: "Pourquoi les plantes détestent-elles les blagues ?",
-		options: ["Parce qu'elles ont peur de se fendre la tige.", 
-				  "Elles prennent tout au sérieux.", 
-		 		  "Elles n'ont pas de sens de l'humus.", 
-				  "Les blagues sont trop arrosées."],
-		correct:  "Elles n'ont pas de sens de l'humus."
+		question: "Quel plat est souvent associé à l'activité des pompiers en extérieur ?",
+		options: ["La paëlla.", 
+				  "Le barbecue.", 
+		 		  "Les brochettes.", 
+				  "Chantée, allumée le feu."],
+		correct:  "Le barbecue."
 	},
 	{
 		id: "8",
-		question: "Pourquoi les ordinateurs sont-ils toujours fatigués le matin ?",
-		options: ["Ils doivent démarrer.", 
-				  "Ils ont trop d'onglets ouverts la nuit.", 
-				  "Ils rêvent de codes.", 
-				  "ls restent connectés 24/7."],
-		correct:  "Ils doivent démarrer."
+		question: "Pourquoi le livre de mathématiques était-il toujours aussi déprimé ?",
+		options: ["Il avait trop de problèmes.", 
+				  "Ses pages étaient vierges.", 
+				  "Il y avait trop de lettres.", 
+				  "Il manquait de figures."],
+		correct:  "Il avait trop de problèmes."
 	},
 	{
 		id: "9",
-		question: "Pourquoi les chauves-souris dorment-elles la tête en bas ?",
-		options: ["Pour voir le monde sous un autre angle.", 
-				  "Elles imitent les acrobates.", 
-				  "C'est plus confortable pour leurs ailes.", 
-				  "Elles aiment les sensations fortes."],
-		correct:  "Pour voir le monde sous un autre angle."
+		question: "Quel est le moyen le plus simple de doubler votre argent ?",
+		options: ["Investir en bourse.", 
+				  "Jouer à la loterie.", 
+				  "Le mettre devant un miroir.", 
+				  "Ouvrir un compte d'épargne."],
+		correct:  "Le mettre devant un miroir."
 	}
 ];
 // Redémarrer le jeu
@@ -246,5 +245,5 @@ window.onload = () => {
 /*Boutton retour*/
 
 document.getElementById("back-button").addEventListener("click", function() {
-    window.location.href = "./1_humour.html";
+    window.location.href = "./3_humour.html";
 });

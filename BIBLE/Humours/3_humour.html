@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeux bibliques</title>
-    <link rel="stylesheet" href="../../css/cruiz.css">
-    <script src="../../js/Genese/1_genese.js" defer></script>
-    <script src="../../js/bible.js" defer></script>
-    <!-- <script src="../../js/menuGenese.js" defer></script> -->
-  </head>
-  <body>
-  <header class="header">
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Jeux bibliques</title>
+      <link rel="stylesheet" href="../../css/cruiz.css">
+      <script src="../Humours/HumourJS/2_humour.js" defer></script>
+      <script src="../../js/bible.js" defer></script>
+      <!-- <script src="../../js/menuGenese.js" defer></script> -->
+    </head>
+    <body style="background: url(./Images/1.png) center center / cover no-repeat fixed;">
+    <header class="header">
     <div class="hamburger-menu close-menu"  onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -19,18 +20,21 @@
 <!--Menu-->
 <nav class="side-menu" id="sideMenu">
 <!-- Image dans le menu -->
-<img src="../../Images/Bible2.jpg" alt="Bible" class="menu-image">
+<img src="/Images/Bible2.jpg" alt="Bible" class="menu-image">
 <!-- Les liens seront ajoutés ici par le script JavaScript -->
 </nav>
 <!--Fin Menu-->        
 </header>
 
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" onclick="hideStartScreen()">Genese 1</button>
+  <button id="start-button" onclick="hideStartScreen()" style="margin: 450px 500px 0 600px;">3 Un peu D'humour 
+          <p style="text-align: center; color: #000;"></p>
+
+    </button>
   </div>
   <div id="wrapper">
     <div id="display-container">
-      <h1>Genese 1</h1>
+      <h1>3 Un peu D'humour </h1>
       <div class="header">
         <div class="number-of-count">
           <span class="number-of-question"></span>
@@ -43,16 +47,17 @@
       <div id="container">
         <!-- Question and options are displayed here -->
       </div>
-      <div class="btn-container">
-        <button id="next-button">Question suivante</button>
-      </div>
+      <div class="btn-wrapper">
+        <button class="btn" id="back-button">&#128412; Retour</button>
+        <button class="btn" id="next-button">Suivante &#128413;</button>
     </div>
-    <!-- <a href="./2_genese.html">Série de questions suivantes&nbsp;<i class="fab fa-youtube"></i></a> -->
+    </div>
+    <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->
   </div>
   <div class="score-container hide">
     <div id="user-score"></div>
     <button id="restart">Redémarrer</button>
-    <a href="../../categories.html" style="width: auto; height: 45px; padding: 10px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
+    <a href="../../categories.html" style="width: auto; height: 45px; padding: 15px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
     <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
   </div>
   <script>

@@ -90,7 +90,7 @@ $("li.accordion span").click(function () {
         id: "Humours",
         text: "Un peu D'humour",
         href: "../../BIBLE/Humours/1_humour.html",
-        nombreArticles: 2
+        nombreArticles: 3
       },
       {
         id: "Devinettes",

@@ -25,8 +25,8 @@
 <!--Fin Menu-->        
 </header>
 
-  <div class="start-screen">
-    <button id="start-button" class="button2" style="margin: 350px 500px 0 500px;"><p style="text-decoration: underline;">Jeu de devinettes &#x1F59D;</p><br>
+<div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
+  <button id="start-button" class="button2" onclick="hideStartScreen()" style="margin: 350px 500px 0 500px;"><p style="text-decoration: underline;">Jeu de devinettes &#x1F59D;</p><br>
         <p style="text-align: left; color: #000;">Une devinette, c'est une question ludique qui propose un défi intellectuel. Elle donne des indices sur 
             quelque chose ou quelqu'un et vous demande de deviner la réponse. C'est un jeu de réflexion amusant qui stimule l'esprit.
         </p>
@@ -47,8 +47,9 @@
       <div id="container">
         <!-- Question and options are displayed here -->
       </div>
-      <div class="btn-container">
-        <button id="next-button">Question suivante</button>
+      <div class="btn-wrapper">
+        <button class="btn" id="back-button">&#128412; Retour</button>
+        <button class="btn" id="next-button">Suivante &#128413;</button>
       </div>
     </div>
     <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->

@@ -24,8 +24,8 @@
 <!--Fin Menu-->        
 </header>
 
-  <div class="start-screen">
-    <button id="start-button">Genese 2</button>
+<div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
+  <button id="start-button" onclick="hideStartScreen()">Genese 2</button>
   </div>
   <div id="wrapper">
     <div id="display-container">
@@ -54,5 +54,12 @@
     <a href="../../categories.html" style="width: auto; height: 45px; padding: 10px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
     <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
   </div>
+  <script>
+    // Fonction pour cacher la section au clic
+    function hideStartScreen() {
+        document.getElementById('start-screen').style.display = 'none';
+    }
+</script>
+
 </body>
 </html>

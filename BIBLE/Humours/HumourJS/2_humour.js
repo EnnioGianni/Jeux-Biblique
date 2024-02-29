@@ -16,7 +16,6 @@ let scoreCount = 0;
 let count = 21;
 let countdown;
 
-//Tableau de questions et d’options
 // Ajoutez des questions, des options et corrigez l’option dans le format ci-dessous
 const quizArray = [
 	{
@@ -171,12 +170,29 @@ function quizCreator() {
         question_DIV.classList.add("question");
         question_DIV.innerHTML = i.question;
         div.appendChild(question_DIV);
-        div.innerHTML += `
-<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-<button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-<button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-<button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-`;
+
+        // Ajoutez des boutons pour les options et leurs écouteurs d'événements
+        for (let j = 0; j < i.options.length; j++) {
+            let optionBtn = document.createElement("button");
+            optionBtn.classList.add("option-div");
+            optionBtn.textContent = i.options[j];
+
+            // Ajouter des écouteurs d'événements pour le survol de la souris
+            optionBtn.addEventListener("mouseenter", function() {
+                this.classList.add("hovered");
+            });
+
+            optionBtn.addEventListener("mouseleave", function() {
+                this.classList.remove("hovered");
+            });
+
+            optionBtn.addEventListener("click", function() {
+                checker(this);
+            });
+
+            div.appendChild(optionBtn);
+        }
+
         quizContainer.appendChild(div);
     }
 }
@@ -223,3 +239,11 @@ window.onload = () => {
     startScreen.classList.remove("hide");
     wrapper.classList.add("hide");
 };
+
+
+
+/*Boutton retour*/
+
+document.getElementById("back-button").addEventListener("click", function() {
+    window.location.href = "./2_humour.html";
+});

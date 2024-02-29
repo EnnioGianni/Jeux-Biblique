@@ -16,98 +16,124 @@ let scoreCount = 0;
 let count = 21;
 let countdown;
 
-//Tableau de questions et d’options
 // Ajoutez des questions, des options et corrigez l’option dans le format ci-dessous
 const quizArray = [
-	{
+    {
 		id: "0",
-		question: "Quel animal utilise Internet sans jamais payer d'abonnement ?",
-		options: ["Le chat.", 
-				  "L'escargot.", 
-				  "Le pigeon voyageur.", 
-				  "La souris."],
-		 correct: "La souris."
+		question: "Je suis le fleuve, qui coule du trône de Dieu et de l'Agneau. Quel fleuve suis-je?(Révélation 22:1) ",
+		options: ["Le fleuve de la vie.", 
+				  "Le Jourdain céleste.", 
+				  "Le fleuve d'eau vive.", 
+				  "Le Nil spirituel."],
+		correct: "Le fleuve de la vie."
 	},
 	{
 		id: "1",
-		question: "Quel est le comble pour un électricien ?",
-		options: ["De ne pas être au courant.", 
-				  "De prendre un choc électrique.", 
-				  "De travailler sous tension.", 
-				  "De perdre le fil."],
-		 correct: "De ne pas être au courant."
+		question: "Je suis la pierre précieuse qui symbolise la première fondation de la Nouvelle Jérusalem. Quelle pierre suis-je? (Révélation 21:19)",
+		options: ["Jaspe.", 
+				  "Saphir.", 
+				  "Chalcédoine.", 
+				  "Émeraude."],
+		correct: "Jaspe."
 	},
 	{
 		id: "2",
-		question: "Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ?",
-		options: ["Parce que sinon, ils tombent encore dans le bateau.", 
-				  "Pour mieux voir le ciel.", 
-		          "Par tradition.", 
-		          "Pour impressionner les poissons."],
-		 correct: "Parce que sinon, ils tombent encore dans le bateau."
+		question: "Je suis le lieu où Jésus a prononcé la parabole du semeur. Où suis-je? (Matthieu 13:1)",
+		options: ["La mer de Galilée.", 
+				  "Le mont des Oliviers.", 
+		          "Le désert de Judée.", 
+		          "Les rues de Jérusalem."],
+		correct: "La mer de Galilée."
 	},
 	{
 		id: "3",
-		question: "Pourquoi les vampires suivent-ils des cours du soir ?",
-		options: ["Ils ne supportent pas la lumière du jour.", 
-			      "Ils veulent apprendre à compter.", 
-			      "Ils préparent un master en hémoglobine.", 
-			      "Ils veulent rester à la mode."],
-		correct: "Ils ne supportent pas la lumière du jour."
+		question: "Je suis la ville où Paul a été arrêté après qu'une foule se soit émue contre lui, l'accusant d'enseigner contre la Loi. Où suis-je? (Actes 21:17-33)",
+		options: ["Jérusalem.", 
+			      "Antioche.", 
+			      "Éphèse.", 
+			      "Philippes."],
+		correct: "Jérusalem."
 	},
 	{
 		id: "4",
-		question: "Pourquoi les cyclones travaillent-ils gratuitement ?",
-		options: ["Ils sont dans le vent.", 
-				  "Ils suivent juste leur passion.", 
-				  "Ils tournent autour du pot.", 
-				  "Ils ont un tourbillon d'idées."],
-		 correct: "Ils sont dans le vent."
+		question: "Je suis le lieu où Pierre a eu la vision d'une grande nappe remplie de toutes sortes d'animaux, Où suis-je? (Actes 8:4-10)",
+		options: ["Joppé.", 
+				  "Jérusalem", 
+				  "Antioche.", 
+				  "Césarée."],
+		correct: "Joppé."
 	},
 	{
 		id: "5",
-		question: "Pourquoi les abeilles ont-elles un bon sens de l'organisation ?",
-		options: ["Elles ont un bon leader.", 
-				  "Elles travaillent toujours en buzz-iness.", 
-				  "Elles aiment faire des listes.", 
-				  "Elles suivent toujours le plan."],
-		 correct: "Elles travaillent toujours en buzz-iness.",
+		question: "Je suis le roi qui a reçu un royaume après la mort de mon père, Salomon. Qui suis-je? (1 Rois 11:43)",
+		options: ["Rehabam.", 
+				  "Jéroboam.", 
+				  "Achab.", 
+				  "Josaphat."],
+		correct: "Rehabam.",
 	},
 	{
 		id: "6",
-		question: "Pourquoi les plantes détestent-elles les mathématiques ?",
-		options: ["Elles trouvent ça trop complexe.", 
-				  "Elles ont du mal avec les racines carrées.", 
-				  "Elles n'aiment pas compter.", 
-				  " Elles préfèrent la biologie."],
-		correct:  "Elles ont du mal avec les racines carrées."
+		question: "je suis le lieu où le peuple d'Israël a campé juste avant de traverser la Mer Rouge. Où suis-je? (Exode 14:2)",
+		options: ["Pihaïroth.", 
+				  "Mara.", 
+				  "Elim.", 
+				  "Sinaï."],
+		correct:  "Pihaïroth."
 	},
 	{
 		id: "7",
-		question: "Pourquoi les plantes détestent-elles les blagues ?",
-		options: ["Parce qu'elles ont peur de se fendre la tige.", 
-				  "Elles prennent tout au sérieux.", 
-		 		  "Elles n'ont pas de sens de l'humus.", 
-				  "Les blagues sont trop arrosées."],
-		correct:  "Elles n'ont pas de sens de l'humus."
+		question: "Je suis le livre biblique qui contient le verset 'La foi est la certitude absolue... (Hébreux 11:1)",
+		options: ["Romains.", 
+				  "Hébreux.", 
+		 		  "Jacques.", 
+				  "1 Corinthiens."],
+		correct:  "Hébreux."
 	},
 	{
 		id: "8",
-		question: "Pourquoi les ordinateurs sont-ils toujours fatigués le matin ?",
-		options: ["Ils doivent démarrer.", 
-				  "Ils ont trop d'onglets ouverts la nuit.", 
-				  "Ils rêvent de codes.", 
-				  "ls restent connectés 24/7."],
-		correct:  "Ils doivent démarrer."
+		question: "Je suis un objet d'or pur, porté par le grand prêtre d'Israël, qui portait les noms des douze tribus d'Israël. Quel objet suis-je? (Exode 28:15-30) ",
+		options: ["L'éphod", 
+				  "Le pectoral.", 
+				  "La couronne.", 
+				  "Le sceptre."],
+		correct:  "Le pectoral."
 	},
 	{
 		id: "9",
-		question: "Pourquoi les chauves-souris dorment-elles la tête en bas ?",
-		options: ["Pour voir le monde sous un autre angle.", 
-				  "Elles imitent les acrobates.", 
-				  "C'est plus confortable pour leurs ailes.", 
-				  "Elles aiment les sensations fortes."],
-		correct:  "Pour voir le monde sous un autre angle."
+		question: "Je suis le fleuve dans lequel Naaman s'est baigné sept fois pour être purifié de sa lèpre. Quel fleuve suis-je? (2 Rois 5:10-14)",
+		options: ["Jourdain.", 
+				  "Nil.", 
+				  "Euphrate.", 
+				  "Tigre."],
+		correct:  "Jourdain."
+	},
+	{
+		id: "9",
+		question: "Je suis le fleuve dans lequel Naaman s'est baigné sept fois pour être purifié de sa lèpre. Quel fleuve suis-je? (2 Rois 5:10-14)",
+		options: ["Jourdain.", 
+				  "Nil.", 
+				  "Euphrate.", 
+				  "Tigre."],
+		correct:  "Jourdain."
+	},
+	{
+		id: "9",
+		question: "Je suis le fleuve dans lequel Naaman s'est baigné sept fois pour être purifié de sa lèpre. Quel fleuve suis-je? (2 Rois 5:10-14)",
+		options: ["Jourdain.", 
+				  "Nil.", 
+				  "Euphrate.", 
+				  "Tigre."],
+		correct:  "Jourdain."
+	},
+	{
+		id: "9",
+		question: "Je suis le fleuve dans lequel Naaman s'est baigné sept fois pour être purifié de sa lèpre. Quel fleuve suis-je? (2 Rois 5:10-14)",
+		options: ["Jourdain.", 
+				  "Nil.", 
+				  "Euphrate.", 
+				  "Tigre."],
+		correct:  "Jourdain."
 	}
 ];
 // Redémarrer le jeu
@@ -246,5 +272,5 @@ window.onload = () => {
 /*Boutton retour*/
 
 document.getElementById("back-button").addEventListener("click", function() {
-    window.location.href = "./1_humour.html";
+    window.location.href = "./3_devinettes.html";
 });

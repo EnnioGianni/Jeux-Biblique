@@ -76,3 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+// Fonction pour cacher la section au clic
+function hideStartScreen() {
+    document.getElementById('start-screen').style.display = 'none';
+}
+

@@ -9,22 +9,8 @@
     <script src="../../js/bible.js" defer></script>
     <!-- <script src="../../js/menuGenese.js" defer></script> -->
   </head>
-  <style>
- #display-container {
-  text-align: center; /* Centrer le contenu horizontalement */
-  padding-top: 200px; /* Espace de 100px depuis le haut de la page */
-  position: relative; /* Position relative pour le positionnement */
-}
-
-#display-container h1 {
-  display: inline-block; /* Permettre le centrage horizontal */
-  margin: 0; /* Supprimer les marges par défaut */
-}
-
- 
-  </style>
-  <body style="background: url(./Images/1.png) center center / cover no-repeat fixed; ">
-    <header class="header" style="color: #000;">
+  <body style="background: url(./Images/1.png) center center / cover no-repeat fixed;">
+    <header class="header">
     <div class="hamburger-menu close-menu"  onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -39,30 +25,30 @@
 <!--Fin Menu-->        
 </header>
 
-  <div class="start-screen">
-    <button id="start-button" style="margin: -550px 500px 0 500px;"><p style="text-decoration: underline;">Un peu D'humour &#x1F59D;</p><br>
-        <p style="text-align: left; color: #000;"></p>
+<div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
+  <button id="start-button" onclick="hideStartScreen()"  style="margin: 450px 500px 0 600px;">1 Un peu D'humour &#x1F59D;<p style="text-align: center; color: #000;"></p>
     </button>
   </div>
   <div id="wrapper">
     <div id="display-container">
       <h1>1 Un peu D'humour</h1>
-      <div class="header">
-        <div class="number-of-count">
-          <span class="number-of-question"></span>
-        </div>
-        <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
-          <span class="time-left"></span>
-        </div>
-      </div>
-      <div id="container">
-        <!-- Question and options are displayed here -->
-      </div>
-      <div class="btn-container">
-        <button id="next-button">Question suivante</button>
-      </div>
-    </div>
+        <div class="header">
+          <div class="number-of-count">
+            <span class="number-of-question"></span>
+          </div>
+            <div class="timer-div">
+              <img src="https://svgshare.com/i/iRM.svg" />
+              <span class="time-left"></span>
+            </div>
+            </div>
+            <div id="container">
+              <!-- Question and options are displayed here -->
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn" id="back-button">&#128412; Retour</button>
+              <button class="btn" id="next-button">Suivante &#128413;</button>
+          </div>
+          </div>
     <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->
   </div>
   <div class="score-container hide">

@@ -195,7 +195,13 @@ a {
 	color: #ffffff;
 	padding: 0.7em 1.8em;
 	border-radius: 0.3em;
+	cursor: pointer; /* Changement du curseur */
 }
+
+#next-button:hover {
+	background-color: #959594;
+  }
+
 #mis-button1 {
 	font-size: 1em;
 	background-color: #0a69ed;
@@ -380,10 +386,35 @@ h1{
     }
 }
 
+.btn-wrapper {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .btn {
+	flex-grow: 1;
+	max-width: 30%;
+	box-sizing: border-box;
+	background-color: #0a69ed;
+	color: white;
+	text-align: center;
+	border: none;
+	padding: 10px;
+	margin: 30px;
+	font-size: 1em;
+	border-radius: 0.3em;
+	box-shadow: 0 20px 45px #00183826;
+	cursor: pointer; /* Changement du curseur */
+  }
+  
+  /* Changement de l'apparence au survol */
+  .btn:hover {
+	background-color: #959594;
+  }
 
 
-
-
-
-
+  .hovered {
+    background-color: #848282; /* Changer la couleur de fond au survol */
+    cursor: pointer; /* Changer le curseur pour indiquer que l'élément est cliquable */
+}
 
