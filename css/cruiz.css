@@ -10,7 +10,7 @@ body {
 }
 h1{
   text-align: center;
-  margin: -2px 0 0 0 ;
+  margin: -40px 0 10px 0 ;
   color: #f7f3f3;
 }
 .start-screen,
@@ -107,7 +107,7 @@ button {
     background-image: url('../Images/Ciel.jpg');
 	padding: 3.1em 1.8em;
 	width: 100%;
-	margin: -70px auto;
+	margin: -10px auto;
 	border-radius: 0.6em;
 	box-shadow: 0 20px 45px rgba(0, 24, 56, 0.15);
 	height: auto;

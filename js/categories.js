@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Exode", url: "./BIBLE/2Exode/1_exode.html" }, // Exemple de lien correctement mis
                 { name: "Levitique", url: "./BIBLE/3Levitique/1_levitique.html" }, // Exemple de lien correctement mis
                 { name: "Nombres", url: "./BIBLE/Nombres/6_Nombres.html" }, // Exemple de lien correctement mis
-                { name: "Actes", url: "./BIBLE/Actes/10_Actes.html" } // Exemple de lien correctement mis
+                { name: "Actes", url: "./BIBLE/Actes/10_Actes.html" }, // Exemple de lien correctement mis
+                { name: "Psaumes", url: "./BIBLE/4Psaumes/1_Psaumes.html" } // Exemple de lien correctement mis
             ]
         },
         {
@@ -63,7 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Devinettes",
-            subcategories: [{ name: "Devinettes", url: "./BIBLE/Devinettes/1_devinettes.html" },
+            subcategories: [
+                { name: "1 Devinettes", url: "./BIBLE/Devinettes/1_devinettes.html" },
+                { name: "2 Devinettes", url: "./BIBLE/Devinettes/2_devinettes.html" },
+                { name: "3 Devinettes", url: "./BIBLE/Devinettes/3_devinettes.html" },
+                { name: "4 Devinettes", url: "./BIBLE/Devinettes/4_devinettes.html" },
         ]
         },
         {

@@ -20,93 +20,93 @@ let countdown;
 const quizArray = [
     {
 		id: "0",
-		question: "Quel est le mois où Nehémia se trouvait à Suse le château ? (Nehémie 1:1)",
-		options: ["Mois de Kislev.", 
-				  "Mois de Nissan.", 
-				  "Mois de Tishri.", 
-				  "Mois d'Adar."],
-		correct: "Mois de Kislev."
+		question: "Qui est l'homme que Jéhovah a envoyé pour délivrer Israël de la main de Madiân? (Juges 6:8)",
+		options: ["Homme fort et vaillant.", 
+				  "Prophète envoyé par Jéhovah.", 
+				  "Fils de Yoash.", 
+				  "Ange de Jéhovah."],
+		correct: "Prophète envoyé par Jéhovah."
 	},
 	{
 		id: "1",
-		question: "Qui était l'un des frères de Nehémia qui entra avec d'autres hommes de Juda ? (Nehémie 1:2)",
-		options: ["Hanani.", 
-				  "Eliezer.", 
-				  "Josué.", 
-				  "Malachie."],
-		correct: "Hanani."
+		question: "Quel est le nom donné à l'autel que Guidéôn a construit après que l'ange de Jéhovah lui est apparu? (Juges 6:24)",
+		options: ["Jéhovah-Yoash.", 
+				  "Jéhovah-Shalom.", 
+				  "Jéhovah-Madiân.", 
+				  "Jéhovah-Amaleq."],
+		correct: "Jéhovah-Shalom."
 	},
 	{
 		id: "2",
-		question: "Pourquoi Nehémia était-il dans le deuil pendant des jours ? (Nehémie 1:3)",
-		options: ["La muraille de Jérusalem était démolie.", 
-				  "La ville de Jérusalem été brûlées.", 
-		          "La situation des rescapés était très mauvaise.", 
-		          "Tous les habitants étaient morts."],
-		correct: "La muraille de Jérusalem était démolie."
+		question: "Quel était le signe demandé par Guidéôn pour confirmer que c'était bien Jéhovah qui lui parlait? (Juges 6:21)",
+		options: ["Faire apparaître une source d'eau.", 
+				  " Faire tomber la pluie.", 
+		          "Faire brûler la viande et les gâteaux sans levain.", 
+		          "Faire pousser une vigne."],
+		correct: "Faire brûler la viande et les gâteaux sans levain."
 	},
 	{
 		id: "3",
-		question: "Quand Nehémia a-t-il commencé à pleurer après avoir entendu les nouvelles ? (Nehémie 1:4)",
-		options: ["À l'annonce des nouvelles.", 
-			      "Dès qu'il a entendu les paroles.", 
-			      "Quand il a vu la situation à Jérusalem.", 
-			      "Après avoir parlé à Hanani."],
-		correct: "Dès qu'il a entendu les paroles."
+		question: "Quel était le nom donné à Guidéôn après qu'il ait détruit l'autel de Baal? (Juges 6:32)",
+		options: ["Yeroubbaal.", 
+			      "Yoash.", 
+			      "Madiân.", 
+			      "Amaleq."],
+		correct: "Yeroubbaal."
 	},
 	{
 		id: "4",
-		question: "Que demande Nehémia à Dieu de se souvenir dans sa prière ? (Nehémie 1:8)",
-		options: ["La parole donnée à Moïse.", 
-				  "La parole donnée à David.", 
-				  "La parole donnée à Salomon.", 
-				  "La parole donnée à Samuel."],
-		correct: "La parole donnée à Moïse."
+		question: "Pourquoi Guidéôn a-t-il demandé à être assuré de la volonté de Dieu de cette manière? (Juges 6:27)",
+		options: ["Par peur des hommes de la ville.", 
+				  "Par curiosité.", 
+				  "Pour tester la puissance de Dieu.", 
+				  "Par manque de foi."],
+		correct: "Par peur des hommes de la ville."
 	},
 	{
 		id: "5",
-		question: "Qui était assis à côté du roi lorsque Nehémia a demandé à être envoyé vers Juda ? (Néhémie 2:6)",
-		options: ["Son fils.", 
-				  "Son épouse royale.", 
-				  "Son conseiller.", 
-				  "Son intendant."],
-		correct: "Son épouse royale.",
+		question: "Où Guidéôn a-t-il construit l'autel à Jéhovah? (Juges 6:26)",
+		options: ["Dans la vallée de Yizréel.", 
+				  "Au sommet de la forteresse.", 
+				  "Sur l'aire de battage.", 
+				  "Sous le grand arbre à Ophra."],
+		correct: "Au sommet de la forteresse.",
 	},
 	{
 		id: "6",
-		question: "Que demande Nehémia au roi Artaxerxès pour la reconstruction de Jérusalem ? (Néhémie 2:8)",
-		options: ["Des soldats.", 
-				  "Des arbres.", 
-				  "De l'argent.", 
-				  "Des lettres de laisser passer."],
-		correct:  "Des arbres."
+		question: "Comment les hommes de la ville ont-ils réagi après que l'autel de Baal a été abattu? (Juges 6:30)",
+		options: ["Ils ont demandé à ce que Guidéôn soit sacrifié.", 
+				  "Ils ont demandé à Yoash de les sauver.", 
+				  "Ils ont fui la ville.", 
+				  "Ils ont construit un nouvel autel."],
+		correct:  "Ils ont demandé à ce que Guidéôn soit sacrifié."
 	},
 	{
 		id: "7",
-		question: "Comment Nehémia est-il retourné à Jérusalem après son examen des murailles ? (Néhémie 2:14)",
-		options: ["Par la Porte de la Vallée.", 
-				  "Par la Porte des Tas de Cendres.", 
-		 		  "Par la Porte de la Source.", 
-				  "Par la Porte de Jérusalem."],
-		correct:  "Par la Porte de la Vallée."
+		question: "Quel était le nombre de serviteurs que Guidéôn a pris pour abattre l'autel de Baal? (Juges 6:27)",
+		options: ["50.", 
+				  "300.", 
+		 		  "70.", 
+				  "10."],
+		correct:  "10."
 	},
 	{
 		id: "8",
-		question: "Qui n'était pas au courant des actions de Nehémia pendant son examen des murailles ? (Néhémie 2:16) ",
-		options: ["Les Juifs", 
-				  "Les prêtres.", 
-				  "Les chefs adjoints.", 
-				  "Les nobles."],
-		correct:  "Les chefs adjoints."
+		question: "Quel lieu est mentionné comme point de rassemblement initial pour l'armée de Guidéôn avant la bataille contre Madiân? (Juges 7:1) ",
+		options: ["La plaine de Yizréel.", 
+				  "La vallée de Harod.", 
+				  "La colline de Moré.", 
+				  "La source de Harod."],
+		correct:  "La source de Harod."
 	},
 	{
 		id: "9",
-		question: "Que Nehémie affirme-t-il que Sânballat, Tobia, l'Ammonite et Guéshem n'ont pas dans Jérusalem ? (2 Rois 5:10-14)",
-		options: ["Part, droit, ni mémorial.", 
-				  "Argent, pouvoir, ni autorité.", 
-				  "Héritage, bénédiction, ni gloire.", 
-				  "Influence, respect, ni soutien."],
-		correct:  "Part, droit, ni mémorial."
+		question: "Où les hommes d'Éphraïm ont-ils tuè Zéeb princes de Madian? (Juges 7:25)",
+		options: ["Au pressoir de Zéeb.", 
+				  "Au rocher d'Oreb.", 
+				  "À Beth-Bara.", 
+				  "Au Jourdain."],
+		correct:  "Au pressoir de Zéeb."
 	}
 ];
 // Redémarrer le jeu
@@ -245,5 +245,5 @@ window.onload = () => {
 /*Boutton retour*/
 
 document.getElementById("back-button").addEventListener("click", function() {
-    window.location.href = "./3_devinettes.html";
+    window.location.href = "./4_devinettes.html";
 });

@@ -20,93 +20,93 @@ let countdown;
 const quizArray = [
     {
 		id: "0",
-		question: "Quel est le mois où Nehémia se trouvait à Suse le château ? (Nehémie 1:1)",
-		options: ["Mois de Kislev.", 
-				  "Mois de Nissan.", 
-				  "Mois de Tishri.", 
-				  "Mois d'Adar."],
-		correct: "Mois de Kislev."
+		question: "Qui est la portion de la part qui m’est échue et de ma coupe? (Psaume 16:5)",
+		options: ["Les saints sur la terre.", 
+				  "Jéhovah.", 
+				  "La royauté.", 
+				  "Dirigée Israël."],
+		correct: "Jéhovah."
 	},
 	{
 		id: "1",
-		question: "Qui était l'un des frères de Nehémia qui entra avec d'autres hommes de Juda ? (Nehémie 1:2)",
-		options: ["Hanani.", 
-				  "Eliezer.", 
-				  "Josué.", 
-				  "Malachie."],
-		correct: "Hanani."
+		question: "Qu’est-ce que l’auteur refuse de verser? (Psaume 16:4)",
+		options: ["Leurs libations de sang.", 
+				  "Leurs prières.", 
+				  "Leurs larmes.", 
+				  "Leurs paroles de tromperie."],
+		correct: "Leurs libations de sang."
 	},
 	{
 		id: "2",
-		question: "Pourquoi Nehémia était-il dans le deuil pendant des jours ? (Nehémie 1:3)",
-		options: ["La muraille de Jérusalem était démolie.", 
-				  "La ville de Jérusalem été brûlées.", 
-		          "La situation des rescapés était très mauvaise.", 
-		          "Tous les habitants étaient morts."],
-		correct: "La muraille de Jérusalem était démolie."
+		question: "Où les cordeaux sont-ils tombés pour David? (Psaume 16:6)",
+		options: ["En des lieux désolés.", 
+				  "En des lieux agréables.", 
+		          "Au shéol.", 
+		          "Dans la fosse."],
+		correct: "En des lieux agréables."
 	},
 	{
 		id: "3",
-		question: "Quand Nehémia a-t-il commencé à pleurer après avoir entendu les nouvelles ? (Nehémie 1:4)",
-		options: ["À l'annonce des nouvelles.", 
-			      "Dès qu'il a entendu les paroles.", 
-			      "Quand il a vu la situation à Jérusalem.", 
-			      "Après avoir parlé à Hanani."],
-		correct: "Dès qu'il a entendu les paroles."
+		question: "Qui David a-t-il constamment placé devant lui? (Psaume 16:8)",
+		options: ["Ses ennemis.", 
+			      "Les saints.", 
+			      "Jéhovah.", 
+			      "Les méchants."],
+		correct: "Jéhovah."
 	},
 	{
 		id: "4",
-		question: "Que demande Nehémia à Dieu de se souvenir dans sa prière ? (Nehémie 1:8)",
-		options: ["La parole donnée à Moïse.", 
-				  "La parole donnée à David.", 
-				  "La parole donnée à Salomon.", 
-				  "La parole donnée à Samuel."],
-		correct: "La parole donnée à Moïse."
+		question: "Quelle partie du corps de David a été corrigée durant les nuits? (Psaume 16:7)",
+		options: ["Ses reins.", 
+				  "Son cœur.", 
+				  "Son esprit.", 
+				  "Ses pensées."],
+		correct: "Ses reins."
 	},
 	{
 		id: "5",
-		question: "Qui était assis à côté du roi lorsque Nehémia a demandé à être envoyé vers Juda ? (Néhémie 2:6)",
-		options: ["Son fils.", 
-				  "Son épouse royale.", 
-				  "Son conseiller.", 
-				  "Son intendant."],
-		correct: "Son épouse royale.",
+		question: "En quoi David souhaite-t-il être gardé? (Psaume 17:8)",
+		options: ["Comme un roi.", 
+				  "Comme la pupille de l’œil.", 
+				  "Comme un lion.", 
+				  "Au sommet de la forteresse."],
+		correct: "Comme la pupille de l’œil.",
 	},
 	{
 		id: "6",
-		question: "Que demande Nehémia au roi Artaxerxès pour la reconstruction de Jérusalem ? (Néhémie 2:8)",
-		options: ["Des soldats.", 
-				  "Des arbres.", 
-				  "De l'argent.", 
-				  "Des lettres de laisser passer."],
-		correct:  "Des arbres."
+		question: "Quelle est la demande de David concernant son jugement? (Psaume 17:2)",
+		options: ["Qu’il vienne des hommes.", 
+				  "Qu’il sorte de devant toi.", 
+				  "Qu’il soit selon la richesse.", 
+				  "Qu’il soit selon ta volonté."],
+		correct:  "Qu’il sorte de devant toi."
 	},
 	{
 		id: "7",
-		question: "Comment Nehémia est-il retourné à Jérusalem après son examen des murailles ? (Néhémie 2:14)",
-		options: ["Par la Porte de la Vallée.", 
-				  "Par la Porte des Tas de Cendres.", 
-		 		  "Par la Porte de la Source.", 
-				  "Par la Porte de Jérusalem."],
-		correct:  "Par la Porte de la Vallée."
+		question: "Quelle action David s'est-il gardé de faire avec sa bouche? (Psaume 17:3)",
+		options: ["Louer les méchants.", 
+				  "Transgresser.", 
+		 		  "Dire des mensonges.", 
+				  "Blasphème."],
+		correct:  "Transgresser."
 	},
 	{
 		id: "8",
-		question: "Qui n'était pas au courant des actions de Nehémia pendant son examen des murailles ? (Néhémie 2:16) ",
-		options: ["Les Juifs", 
-				  "Les prêtres.", 
-				  "Les chefs adjoints.", 
-				  "Les nobles."],
-		correct:  "Les chefs adjoints."
+		question: "Quelle comparaison est faite pour décrire les ennemis de David? (Psaume 17:12) ",
+		options: ["Comme un jeune lion qui se tient dans des cachettes.", 
+				  "Comme un jeune lion qui est prêt à dévorer.", 
+				  "Comme un jeune lion qui rode.", 
+				  "Comme un jeune lion qui est en embuscade."],
+		correct:  "Comme un jeune lion qui se tient dans des cachettes."
 	},
 	{
 		id: "9",
-		question: "Que Nehémie affirme-t-il que Sânballat, Tobia, l'Ammonite et Guéshem n'ont pas dans Jérusalem ? (2 Rois 5:10-14)",
-		options: ["Part, droit, ni mémorial.", 
-				  "Argent, pouvoir, ni autorité.", 
-				  "Héritage, bénédiction, ni gloire.", 
-				  "Influence, respect, ni soutien."],
-		correct:  "Part, droit, ni mémorial."
+		question: "Quelle demande fait David concernant ses pas? (Psaume 17:5)",
+		options: ["Qu'ils saisissent tes pistes.", 
+				  "Qu'ils me mènent à la droiture.", 
+				  "Qu'ils chancellent nullement.", 
+				  "Qu'ils suivent les sentiers des justes."],
+		correct:  "Qu'ils saisissent tes pistes."
 	}
 ];
 // Redémarrer le jeu
@@ -245,5 +245,5 @@ window.onload = () => {
 /*Boutton retour*/
 
 document.getElementById("back-button").addEventListener("click", function() {
-    window.location.href = "./3_devinettes.html";
+    window.location.href = "#";
 });

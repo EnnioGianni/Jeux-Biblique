@@ -77,28 +77,28 @@ const quizArray = [
 		id: "6",
 		question: "Qui : a) Appelle le feu du ciel, b) Loyauté envers Naomi, c) Conduit Israël à la terre promise. Il y a un intrus parmi ces réponses.",
 		options: ["b) Élie", 
-				  "a) Ruth", 
-				  "d) Josué", 
-				  "c) Moise,"],
-		correct:  "c) Moise,"
+				  "a) Ruth.", 
+				  "d) Josué.", 
+				  "c) Moise.,"],
+		correct:  "c) Moise.,"
 	},
 	{
 		id: "7",
 		question: "Qui : a) Sauve son peuple, b) Défait les Madianites, c) Lutte avec l'ange de Dieu. Il y a un intrus parmi ces réponses.",
 		options: ["a) Jacob", 
-				  "b) Esther", 
-		 		  "d) Gédéon", 
+				  "b) Esther.", 
+		 		  "d) Gédéon.", 
 				  "c) Myriam."],
 		correct:  "c) Myriam."
 	},
 	{
 		id: "8",
-		question: "Qui : a) Oint le roi David, b) Juge et prophétesse, c) Premier meurtrier. Il y a un intrus parmi ces réponses.",
+		question: "Qui a : a) Oint le roi David, b) Juge et prophétesse, c) Premier meurtrier. Il y a un intrus parmi ces réponses.",
 		options: ["b) Samuel.", 
 				  "d) Achaz.", 
 				  "a) Caïn.", 
 				  "c) Débora."],
-		correct:  "c) Débora."
+		correct:  "d) Achaz."
 	},
 	{
 		id: "9",

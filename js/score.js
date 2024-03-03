@@ -95,14 +95,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Charge les données au démarrage
     loadData();
 });
-
-
-
-
-
-
-
-
-
-
-
