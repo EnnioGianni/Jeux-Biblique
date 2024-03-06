@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
     // Ajoute l'écouteur d'événements pour les cellules éditables
     tableau.addEventListener('input', function(event) {
         if (event.target.classList.contains('editable-cell') || event.target.classList.contains('name-cell')) {
