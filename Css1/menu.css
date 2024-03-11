@@ -1,0 +1,139 @@
+/* Style pour le menu hamburger */
+#hamburger-icon {
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+/* Style général pour le menu latéral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+#sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../Images/3Ciel.jpg') center center / cover no-repeat;
+    border: 2px solid black;
+    box-shadow: 0px 4px 8px rgba(116, 115, 115, 0.5); /* Ajoute une ombre */
+    /* Les autres styles de votre sidebar-menu */
+  }
+  
+
+/* Style des liens du menu */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Bouton de fermeture */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/* Incluez le CSS précédent pour le menu et ajoutez ceci pour les boutons */
+button {
+    display: inline-block;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+/* Styles pour les boutons, inclus l'animation et le style au survol */
+button {
+    display: inline-block;
+    background-color: #6903f8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px; /* Ajustez la largeur selon votre design */
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    outline: none; /* Ajouté pour éviter le contour lors de la sélection */
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: "\00bb"; /* Caractère Unicode pour la flèche vers la droite */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #0b63f9;
+}
+
+#button:hover span {
+    padding-right: 25px;
+}
+
+#button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.special-button {
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Couleur de texte blanche */
+    border: none; /* Optionnel : supprime la bordure du bouton */
+    padding: 10px 20px; /* Optionnel : ajuste le remplissage autour du texte */
+    text-align: center; /* Optionnel : centre le texte du bouton */
+    text-decoration: none; /* Optionnel : supprime le soulignement des liens */
+    display: inline-block; /* Optionnel : permet un meilleur contrôle de la mise en page */
+    font-size: 16px; /* Optionnel : ajuste la taille du texte */
+    margin: 4px 2px; /* Optionnel : ajoute de l'espace autour du bouton */
+    cursor: pointer; /* Optionnel : affiche un curseur de pointeur pour indiquer que c'est cliquable */
+    border-radius: 5px; /* Optionnel : adoucit les coins du bouton */
+    border: 3px solid rgb(254, 252, 252);
+    box-shadow: 0px 4px 8px rgba(154, 154, 154, 0.5); /* Ajoute une ombre */
+
+  }
+  
+  /* Pour changer l'apparence lors du survol du bouton */
+  .special-button:hover {
+    background-color: #024906;
+  }
+  

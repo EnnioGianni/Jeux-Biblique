@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu Biblique</title>
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./Css1/menu.css">
     <link rel="stylesheet" href="./Css1/1index.css">
     <link rel="stylesheet" href="./Css1/modale1.css">
     <script src="./Js1/inscription.js" defer></script>
+    <script src="./Js/hambourger.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+  .game-buttons {
+  display: flex;
+  justify-content: space-between;
+}
 
+</style>
 </head>
 <body>
+
+<!-- Icône du menu hamburger -->
+  <div id="hamburger-icon" onclick="toggleMenu()">
+    &#9776;
+  </div>
+
+<!-- Menu latéral avec boutons stylisés -->
+<div id="sidebar-menu" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+
+  <!-- Image ajoutée au-dessus du premier lien -->
+  <img src="./Images/Bible2.jpg" alt="Description de l'image" style="width:100%;">
+
+  <button class="special-button" onclick="location.href='./BIBLE/bibleSommaire.html'"><span>Lien 1 &#x1F59D;</span></button>
+  <button class="special-button" onclick="location.href='#'"><span>Lien 2 &#x1F59D;</span></button>
+  <button class="special-button" onclick="location.href='#'"><span>Lien 3 &#x1F59D;</span></button>
+  <button class="special-button" onclick="location.href='#'"><span>Lien 4 &#x1F59D;</span></button>
+  <button class="special-button" onclick="location.href='#'"><span>Lien 5 &#x1F59D;</span></button>
+  </div>
+
+
  
 <div class="modal-background" id="subscribeModal">
   <div class="modal-content">
@@ -44,9 +72,13 @@
       <p>
         Bienvenue dans notre jeu biblique interactif, conçu pour enrichir votre connaissance des histoires et personnages de la Bible de manière ludique. Que vous soyez passionné par la Bible ou simplement curieux, ce jeu vous invite à explorer ses enseignements et récits captivants. Choisissez votre mode de jeu, solo pour une exploration personnelle ou compétitif pour un défi entre proches, et lancez-vous dans une aventure qui vous fera découvrir les trésors spirituels et culturels de la Bible. Préparez-vous à une expérience enrichissante, ouvrant votre esprit et cœur aux leçons profondes de ce texte ancien.
       </p>
-      <button><a href="./categories.html">Individuel &#x1F59D;</a></button>
-      <button><a href="./score.html">En groupe &#x1F59D;</a></button>
-    </section>
+
+      <div class="game-buttons">
+        <button><a href="./categories.html">Individuel &#x1F59D;</a></button>
+        <button><a href="./score.html">En groupe &#x1F59D;</a></button>
+      </div>  
+
+  </section>
     <section class="details">
       <header style="font-size: 20px;">Explication du jeu.</header>
       

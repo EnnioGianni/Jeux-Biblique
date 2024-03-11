@@ -29,7 +29,7 @@ $("li.accordion span").click(function () {
         id: "Genese",
         text: "Genèse",
         href: "../../BIBLE/1Genese/1_genese.html",
-        nombreArticles: 2
+        nombreArticles: 3
       },
       {
         id: "Exode",
@@ -96,13 +96,13 @@ $("li.accordion span").click(function () {
         id: "Devinettes",
         text: "Devinettes",
         href: "../../BIBLE/Devinettes/1_devinettes.html",
-        nombreArticles: 2
+        nombreArticles: 5
       },
       {
         id: "Evangiles",
         text: "Evangiles",
         href: "../categories.html",
-        nombreArticles: 2
+        nombreArticles: 3
       },
      
      

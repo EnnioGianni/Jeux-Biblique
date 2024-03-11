@@ -1,16 +1,26 @@
 /* Style de base pour le fond de la fenêtre modale */
 .modal-background {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff; /* Fond opaque */
-    padding: 10px 20px; /* Ajustez selon le besoin */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Ombre pour donner de la profondeur */
-    z-index: 1000; /* S'assure que le modal apparaît au-dessus des autres éléments */
-    visibility: visible; /* S'assure que le modal est toujours visible */
-    opacity: 1; /* Pas d'effet d'opacité */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Positionnement fixe par rapport à la fenêtre du navigateur */
+  top: 0;
+  left: 0;
+  width: 100%; /* Couvre toute la largeur */
+  height: 100%; /* Couvre toute la hauteur */
+  background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+  z-index: 1; /* S'assure que l'arrière-plan est au-dessus du contenu de la page */
+}
+
+.modal-content {
+  margin: auto; /* Centrer la modale dans le conteneur flex */
+  padding: 20px; /* Espacement à l'intérieur de la modale */
+  background: white; /* Couleur de fond de la modale */
+  border-radius: 5px; /* Bords arrondis */
+  width: 80%; /* Largeur de la modale, ajustez selon le besoin */
+  max-width: 500px; /* Largeur maximale pour les écrans larges */
+}
+
   #p{
     color: #000;
   }

@@ -20,93 +20,93 @@ let countdown;
 const quizArray = [
     {
 		id: "0",
-		question: "Qui est l'homme que Jéhovah a envoyé pour délivrer Israël de la main de Madiân? (Juges 6:8)",
-		options: ["Homme fort et vaillant.", 
-				  "Prophète envoyé par Jéhovah.", 
-				  "Fils de Yoash.", 
-				  "Ange de Jéhovah."],
-		correct: "Prophète envoyé par Jéhovah."
+		question: "Touttes les lettres de l'alphabet sont en réunions sauf cinq, les quelles?",
+		options: ["Les lettres A B C T O.", 
+				  "Les lettres G T P L I.", 
+				  "Les lettres G T U T L.", 
+				  "Les lettres G T O Q P."],
+		correct: "Les lettres G T O Q P."
 	},
 	{
 		id: "1",
-		question: "Quel est le nom donné à l'autel que Guidéôn a construit après que l'ange de Jéhovah lui est apparu? (Juges 6:24)",
-		options: ["Jéhovah-Yoash.", 
-				  "Jéhovah-Shalom.", 
-				  "Jéhovah-Madiân.", 
-				  "Jéhovah-Amaleq."],
-		correct: "Jéhovah-Shalom."
+		question: "Quelle est la lettre la plus tranchante ?",
+		options: ["B.", 
+				  "S.", 
+				  "M.", 
+				  "H."],
+		correct: "H."
 	},
 	{
 		id: "2",
-		question: "Quel était le signe demandé par Guidéôn pour confirmer que c'était bien Jéhovah qui lui parlait? (Juges 6:21)",
-		options: ["Faire apparaître une source d'eau.", 
-				  " Faire tomber la pluie.", 
-		          "Faire brûler la viande et les gâteaux sans levain.", 
-		          "Faire pousser une vigne."],
-		correct: "Faire brûler la viande et les gâteaux sans levain."
+		question: "Je commence la nuit et je finis le matin. Qui suis-je ?",
+		options: ["A.", 
+				  "Z.", 
+		          "M.", 
+		          "N."],
+		correct: "N."
 	},
 	{
 		id: "3",
-		question: "Quel était le nom donné à Guidéôn après qu'il ait détruit l'autel de Baal? (Juges 6:32)",
-		options: ["Yeroubbaal.", 
-			      "Yoash.", 
-			      "Madiân.", 
-			      "Amaleq."],
-		correct: "Yeroubbaal."
+		question: "Que font deux plantes qui se rencontrent ?",
+		options: ["Elles prennent racine.", 
+			      "Elles photosynthétisent.", 
+			      "Elles poussent ensemble.", 
+			      "Elles vont prendre un pot."],
+		correct: "Elles vont prendre un pot."
 	},
 	{
 		id: "4",
-		question: "Pourquoi Guidéôn a-t-il demandé à être assuré de la volonté de Dieu de cette manière? (Juges 6:27)",
-		options: ["Par peur des hommes de la ville.", 
-				  "Par curiosité.", 
-				  "Pour tester la puissance de Dieu.", 
-				  "Par manque de foi."],
-		correct: "Par peur des hommes de la ville."
+		question: "Quelle heure est-il quand l'horloge sonne 13 coups ?",
+		options: ["Minuit.", 
+				  "La montre avance d'une heure.", 
+				  "L’heure de faire réparer l’horloge.", 
+				  "13 heures."],
+		correct: "L’heure de faire réparer l’horloge."
 	},
 	{
 		id: "5",
-		question: "Où Guidéôn a-t-il construit l'autel à Jéhovah? (Juges 6:26)",
-		options: ["Dans la vallée de Yizréel.", 
-				  "Au sommet de la forteresse.", 
-				  "Sur l'aire de battage.", 
-				  "Sous le grand arbre à Ophra."],
-		correct: "Au sommet de la forteresse.",
+		question: "Quelle a été la réaction d'un Parisien après avoir entendu une blague ?",
+		options: ["Il a ri.", 
+				  "Il a Paris.", 
+				  "Il est parti.", 
+				  "Il n'a pas compris."],
+		correct: "Il a Paris.",
 	},
 	{
 		id: "6",
-		question: "Comment les hommes de la ville ont-ils réagi après que l'autel de Baal a été abattu? (Juges 6:30)",
-		options: ["Ils ont demandé à ce que Guidéôn soit sacrifié.", 
-				  "Ils ont demandé à Yoash de les sauver.", 
-				  "Ils ont fui la ville.", 
-				  "Ils ont construit un nouvel autel."],
-		correct:  "Ils ont demandé à ce que Guidéôn soit sacrifié."
+		question: "Quels sont les deux animaux les plus intelligents ?",
+		options: ["Chien et le chat.", 
+				  "L'aigle et l'éléphant.", 
+				  "Dauphin et le singe.", 
+				  "Cerf et le veau."],
+		correct:  "Cerf et le veau."
 	},
 	{
 		id: "7",
-		question: "Quel était le nombre de serviteurs que Guidéôn a pris pour abattre l'autel de Baal? (Juges 6:27)",
-		options: ["50.", 
-				  "300.", 
-		 		  "70.", 
-				  "10."],
-		correct:  "10."
+		question: "Qu’est-ce qu’une manifestation d’aveugles ?",
+		options: ["Un concert silencieux.", 
+				  "Une exposition dans le noir.", 
+		 		  "Un marathon de nuit.", 
+				  "Un festival de Cannes."],
+		correct:  "Un festival de Cannes."
 	},
 	{
 		id: "8",
-		question: "Quel lieu est mentionné comme point de rassemblement initial pour l'armée de Guidéôn avant la bataille contre Madiân? (Juges 7:1) ",
-		options: ["La plaine de Yizréel.", 
-				  "La vallée de Harod.", 
-				  "La colline de Moré.", 
-				  "La source de Harod."],
-		correct:  "La source de Harod."
+		question: "Que fait Platon quand ça le démange ?",
+		options: ["Il écrit.", 
+				  "Il médite.", 
+				  "Il Socrate.", 
+				  "Il philosophe."],
+		correct:  "Il Socrate."
 	},
 	{
 		id: "9",
-		question: "Où les hommes d'Éphraïm ont-ils tuè Zéeb princes de Madian? (Juges 7:25)",
-		options: ["Au pressoir de Zéeb.", 
-				  "Au rocher d'Oreb.", 
-				  "À Beth-Bara.", 
-				  "Au Jourdain."],
-		correct:  "Au pressoir de Zéeb."
+		question: "Quelle est la seule plante que l’on écrase tous les jours mais que l’on n’arrose jamais ?",
+		options: ["La plante verte.", 
+				  "La plante des pieds.", 
+				  "Le pissenlit.", 
+				  "La pelouse."],
+		correct:  "La plante des pieds."
 	}
 ];
 // Redémarrer le jeu
@@ -140,17 +140,76 @@ nextBtn.addEventListener("click", () => {
     }
 });
 
-const timerDisplay = () => {
+
+
+
+
+
+
+
+// Assurez-vous que cette fonction soit définie dans votre code
+function showModal(message) {
+    const modalExists = document.getElementById("myModal");
+    const modal = modalExists || createModal();
+    document.getElementById("modal-text").innerText = message;
+    modal.style.display = "block";
+  }
+  
+  // Fonction pour créer une fenêtre modale
+  function createModal() {
+    const modal = document.createElement("div");
+    modal.setAttribute("id", "myModal");
+    modal.style.position = "fixed";
+    modal.style.zIndex = 1;
+    modal.style.left = 0;
+    modal.style.top = 0;
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.overflow = "auto";
+    modal.style.backgroundColor = "rgba(0,0,0,0.4)";
+    
+    const modalContent = document.createElement("div");
+    modalContent.style.margin = "15% auto";
+    modalContent.style.padding = "20px";
+    modalContent.style.border = "1px solid #888";
+    modalContent.style.width = "30%";
+    modalContent.style.backgroundColor = "white";
+  
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "OK";
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+    modalContent.appendChild(closeBtn);
+  
+    const modalText = document.createElement("p");
+    modalText.setAttribute("id", "modal-text");
+    modalText.style.color = "black"; // Définit la couleur du texte à noir
+modalContent.insertBefore(modalText, closeBtn);
+  
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+    
+    return modal;
+    
+  }
+  const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
         timeLeft.innerHTML = `${count}s`;
+
+        // Affiche un message lorsque le compteur atteint 5 secondes restantes
+        if (count == 10) {
+            alert("Dans 10 secondes, on revient à la première question !");
+        }
+
         if (count == 0) {
             clearInterval(countdown);
-            displayNext();
+            // Réinitialise le quiz pour revenir à la première question
+            inital(); // Assurez-vous que cette fonction réinitialise correctement tout ce dont vous avez besoin
         }
     }, 1000);
 };
-
 const quizDisplay = (questionCount) => {
     let quizCards = document.querySelectorAll(".container_mid");
     quizCards.forEach((card) => {

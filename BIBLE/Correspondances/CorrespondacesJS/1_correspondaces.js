@@ -145,9 +145,16 @@ const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
         timeLeft.innerHTML = `${count}s`;
+
+        // Affiche un message lorsque le compteur atteint 5 secondes restantes
+        if (count == 5) {
+            alert("Dans 5 secondes, on revient à la première question !");
+        }
+
         if (count == 0) {
             clearInterval(countdown);
-            displayNext();
+            // Réinitialise le quiz pour revenir à la première question
+            inital(); // Assurez-vous que cette fonction réinitialise correctement tout ce dont vous avez besoin
         }
     }, 1000);
 };
