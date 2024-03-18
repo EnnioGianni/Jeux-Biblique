@@ -252,5 +252,8 @@ window.onload = () => {
 /*Boutton retour*/
 
 document.getElementById("back-button").addEventListener("click", function() {
-    window.location.href = "#";
+    window.location.href = "./1_Psaumes.html";
+});
+document.getElementById("bac-button").addEventListener("click", function() {
+    window.location.href = "./18em_Psaumes.html";
 });

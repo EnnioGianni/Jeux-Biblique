@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const categories = [
-    //Bible
+  //Bible
         {
             name: "Bible",
             subcategories: [
+//Genèse
               {
                 name: "Genèse",
                 subSubcategories: [
@@ -13,13 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Ajouter d'autres sous-sous-catégories ici
                 ]
             },
+//Psaumes            
+              {
+                name: "Psaumes",
+                subSubcategories: [
+                  { name: "Psaumes", url: "./BIBLE/4Psaumes/1_Psaumes.html" }, // Exemple de lien correctement mis
+                  { name: "Psaume 18", url: "./BIBLE/4Psaumes/18em_Psaumes.html" }, // Exemple de lien correctement mis
+                    // Ajouter d'autres sous-sous-catégories ici
+                ]
+            },
                 { name: "Exode", url: "./BIBLE/2Exode/1_exode.html" }, // Exemple de lien correctement mis
                 { name: "Levitique", url: "./BIBLE/3Levitique/1_levitique.html" }, // Exemple de lien correctement mis
                 { name: "Nombres", url: "./BIBLE/Nombres/6_Nombres.html" }, // Exemple de lien correctement mis
                 { name: "Actes", url: "./BIBLE/Actes/10_Actes.html" }, // Exemple de lien correctement mis
-                { name: "Psaumes", url: "./BIBLE/4Psaumes/1_Psaumes.html" } // Exemple de lien correctement mis
             ]
         },
+        
   //Personages Bibliques
   {
     name: "Personnages Bibliques",
@@ -29,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         subSubcategories: [
           { name: "Guidéon", url: "./BIBLE/Personages_Bibliques/Guideon.html" },
         //   { name: "Leçons de vie", url: "./BIBLE/Personages_Bibliques/Guideon/lecons.html" },
+        ]
+      },
+      {
+        name: "Jérémie",
+        subSubcategories: [
+          { name: "1_Jérémie", url: "./BIBLE/Personages_Bibliques/1_jeremie.html" },
+     //   { name: "1_Jérémie", url: "./BIBLE/Personages_Bibliques/1_jeremie.html" },
         ]
       },
       {
@@ -43,6 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
         subSubcategories: [
           { name: "Manoah", url: "./BIBLE/Personages_Bibliques/manoah.html" },
         //   { name: "Saül et David", url: "./BIBLE/Personages_Bibliques/Saul/et_david.html" },
+        ]
+      },
+    ]
+  },
+  //Questions Libres
+  {
+    name: "Questions Libres",
+    subcategories: [
+      {
+        name: "Questions Libres",
+        subSubcategories: [
+          { name: "Questions Libres", url: "./QuestionsLibres/index.html" },
+          // { name: "Leçons de vie", url: "./BIBLE/Personages_Bibliques/Guideon/lecons.html" },
         ]
       },
     ]
@@ -251,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { 
               name: "Luc", 
               subSubcategories: [
-                { name: "Luc", url: "./BIBLE/Evangiles/luc.html" },
+                { name: "Luc", url: "./BIBLE/Evangiles/luc/luc.html" },
                 // { name: "Paraboles de Luc", url: "./BIBLE/Evangiles/Luc/paraboles.html" },
                 // Ajouter d'autres sous-sous-catégories spécifiques à Luc ici
               ]
@@ -259,15 +289,15 @@ document.addEventListener('DOMContentLoaded', () => {
             { 
               name: "Jean", 
               subSubcategories: [
-                { name: "Jean", url: "./BIBLE/Evangiles/jean.html" },
-                // { name: "Miracles de Jean", url: "./BIBLE/Evangiles/Jean/miracles.html" },
+                { name: "Questions sur L'Évangile de Jean", url: "./BIBLE/Evangiles/jean/jean.html" },
+                { name: "Questions sur les origines de Jean.", url: "./BIBLE/Evangiles/Jean/originesDeJeans.html" },
                 // Ajouter d'autres sous-sous-catégories spécifiques à Jean ici
               ]
             },
             { 
               name: "Matthieu", 
               subSubcategories: [
-                { name: "Matthieu", url: "./BIBLE/Evangiles/matthieu.html"},
+                { name: "Matthieu", url: "./BIBLE/Evangiles/matthieu/matthieu.html"},
                 // { name: "Généalogie de Jésus", url: "./BIBLE/Evangiles/Matthieu/genealogie.html" },
                 // Ajouter d'autres sous-sous-catégories spécifiques à Matthieu ici
               ]
@@ -275,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { 
               name: "Marc", 
               subSubcategories: [
-                { name: "Matthieu", url: "./BIBLE/Evangiles/matthieu.html"},
+                { name: "Marc", url: "./BIBLE/Evangiles/marc/marc.html"},
                 // { name: "Généalogie de Jésus", url: "./BIBLE/Evangiles/Matthieu/genealogie.html" },
                 // Ajouter d'autres sous-sous-catégories spécifiques à Matthieu ici
               ]

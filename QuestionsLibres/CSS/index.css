@@ -1,0 +1,183 @@
+/* Styles généraux pour le fond et le corps de la page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Assurez-vous de remplacer 'chemin_vers_votre_image.jpg' par le chemin réel de votre image */
+  /* background-image: url('chemin_vers_votre_image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#myVideo {
+  position: fixed; /* Ou absolute selon le besoin */
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1; /* Assure que la vidéo reste en arrière-plan */
+}
+
+#contenu, form {
+  position: relative; 
+  z-index: 100; /* Assure qu'ils sont au-dessus de la vidéo de fond */
+}
+/* Par exemple : */
+#contenu, form {
+  position: relative; /* Faites en sorte que votre contenu soit positionné relativement ou absolument */
+  z-index: 100; /* Assurez-vous qu'il est au-dessus de la vidéo de fond */
+}
+
+/* Styles pour les cadres contenant chaque question et sa réponse */
+.cadre {
+  margin: 150px auto; /* Centré horizontalement */
+  background-color: rgb(214, 214, 214);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre pour ajouter de la profondeur */
+  border-radius: 8px; /* Bordures arrondies pour un look moderne */
+  width: 80%; /* Ajustez selon la largeur souhaitée */
+  max-width: 600px; /* Pour ne pas étendre trop sur de grands écrans */
+  border: 2px solid white; /* Bordure blanche pour uniformité */
+}
+
+.cadre p {
+  margin: 0;
+  display: block; /* Assure que l'énoncé est sur sa propre ligne */
+}
+
+/* Styles pour les boutons, avec couleurs, ombres, et encadrement */
+.cadre button, #suivantBtn {
+  display: inline-block; /* Pour assurer la mise en forme cohérente */
+  margin: 10px 0 10px 200px;
+  padding: 10px 20px;
+  border: 2px solid white; /* Bordure blanche ajoutée */
+  background-color: #007bff; /* Bleu, choisissez la couleur que vous préférez */
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Ombre portée pour un effet 3D */
+  cursor: pointer; /* Change le curseur pour indiquer la possibilité de cliquer */
+  transition: all 0.3s ease; /* Transition pour le survol */
+}
+
+.cadre button:hover, #suivantBtn:hover {
+  background-color: #0056b3; /* Un peu plus foncé au survol */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Ombre plus prononcée au survol */
+}
+
+/* Styles pour les éléments `<i>`, utilisés pour afficher la réponse */
+.cadre i {
+  display: block; /* Pour positionnement et dimensionnement */
+  box-shadow: rgb(51, 51, 51) 2px 2px 4px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 3px;
+  border: 1px solid #ddd; /* Encadrement subtil */
+}
+/* Centrer la réponse */
+.cadre i {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Styles pour le champ de saisie de la réponse de l'utilisateur */
+.cadre input[type="text"] {
+  width: calc(100% - 30px); /* Ajuste la largeur pour s'adapter à l'intérieur du cadre */
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: 2px solid #007bff; /* Bordure colorée pour correspondre au style du bouton */
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Ombre interne pour un effet de profondeur */
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.cadre input[type="text"]:focus {
+  border-color: #0056b3; /* Change la couleur de la bordure au focus */
+  outline: none; /* Supprime le contour par défaut */
+}
+
+/* Centrer le bouton "Question suivante" et appliquer le style uniforme */
+#suivantBtn {
+  display: block;
+  margin: 0px auto; /* Centrage horizontal */
+}
+
+
+
+
+
+/*MODALE CHANGEMENT*/
+
+.modal {
+  display: none; /* La modal est cachée par défaut */
+  position: fixed; /* Positionnement fixe pour toujours apparaître au premier plan */
+  z-index: 1000; /* S'assurer que la modal est au-dessus d'autres éléments */
+  left: 50%; /* Centrage horizontal */
+  top: 50%; /* Centrage vertical */
+  transform: translate(-50%, -50%); /* Ajustement pour un centrage précis */
+  width: 650px; /* Largeur spécifiée */
+  height: 100px; /* Hauteur spécifiée */
+  background-color: #fff; /* Couleur de fond blanc */
+  border: 1px solid #888; /* Bordure légère */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+  overflow: hidden; /* Pour éviter tout débordement de contenu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  z-index: 1000; /* S'assure que la modal est bien au-dessus des autres éléments */
+}
+
+.close-button {
+  display: none; /* Cacher le bouton de fermeture car il sera géré automatiquement */
+}
+.modal-content {
+  padding: 10px; /* Espace intérieur pour le contenu */
+  text-align: center; /* Centrage du texte à l'intérieur */
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+  
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modifier l'effet de clignotement pour alterner entre gris et bleu */
+@keyframes blink {
+0%, 100% { color: rgb(13, 5, 249); }
+50% { color: rgb(255, 0, 0); }
+}
+
+.blink {
+animation: blink 2s linear infinite;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/menu.css" />
+    <link rel="stylesheet" href="./CSS/modale.css" />
+    <script src="./JS/index.js" defer></script>
+    <script src="./JS/menu.js" defer></script>
+    <!-- <script src="./JS/modale.js" defer></script> -->
+    <title>Quiz Interactif</title>
+    
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./Video/Cascade.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
+<!--Modale-->      
+<div id="modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-button" onclick="fermerModal()">&times;</span>
+    <p id="modal-text"></p>
+    <!-- Emplacement pour le minuteur -->
+  </div>
+</div>
+            
+<div id="contenu"></div>
+<button id="suivantBtn">Question suivante</button> <!-- Bouton ajouté directement dans le HTML pour un meilleur contrôle -->
+
+
+<!-- Assurez-vous que cette partie se trouve dans votre document -->
+<!--Modale de fin-->
+<div id="modal-fin" style="display:none;">
+  <div style="text-align: center;">
+    
+    <!-- Message de score -->
+    <div id="div-message-score">
+      <div id="message-score" class="bouton-standard" style="cursor: default; pointer-events: none; display: inline-block;">
+        Vous avez terminé toutes les questions! Votre score est :
+      </div>
+    </div>
+
+    <!-- Bouton Recommencer -->
+    <div id="div-recommencer">
+      <button id="recommencer" class="bouton-standard">Recommencer</button>
+    </div>
+
+    <!-- Bouton Autres Questions -->
+    <div id="div-autres-questions">
+     
+        <button id="autres-questions" class="bouton-standard"></button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<form id="myForm" onsubmit="return validerForm()" class="cadre" style="display:none">
+  <label>Question : <input type="text" name="question"></label>
+  <label>Réponse : <input type="text" name="reponse"></label>
+  <button type="submit">Valider</button>
+  <button type="button" onclick="fermer()">Quitter</button>
+</form>
+</body>
+</html>

@@ -32,6 +32,13 @@ $("li.accordion span").click(function () {
         nombreArticles: 3
       },
       {
+        id: "Psaumes",
+        text: "Psaumes",
+        href: "../../BIBLE/4Psaumes/1_Psaumes.html",
+        href: "../../BIBLE/4Psaumes/18em_Psaumes.html",
+        nombreArticles: 2
+      },
+      {
         id: "Exode",
         text: "Exode",
         href: "../../BIBLE/2Exode/1_exode.html",
@@ -100,9 +107,16 @@ $("li.accordion span").click(function () {
       },
       {
         id: "Evangiles",
+        text: "Personages_Bibliques",
+        href: "../categories.html",
+        nombreArticles: 4
+      },
+     
+      {
+        id: "Personages bibliques",
         text: "Evangiles",
         href: "../categories.html",
-        nombreArticles: 3
+        nombreArticles: 4
       },
      
      
