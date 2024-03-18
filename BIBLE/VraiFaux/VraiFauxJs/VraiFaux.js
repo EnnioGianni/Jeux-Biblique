@@ -13,7 +13,7 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-let count = 21;
+let count = 40;
 let countdown;
 
 //Tableau de questions et d’options
@@ -135,7 +135,7 @@ nextBtn.addEventListener("click", () => {
     } else {
         countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
         quizDisplay(questionCount);
-        count = 21;
+        count = 40;
         clearInterval(countdown);
         timerDisplay();
     }
@@ -214,7 +214,7 @@ function inital() {
     questionCount = 0;
     scoreCount = 0;
     clearInterval(countdown);
-    count = 21;
+    count = 40;
     timerDisplay();
     quizCreator();
     quizDisplay(questionCount);
