@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    font-size: 16px; /* Taille de police de base */
+    font-size: calc(14px + 1vw); /* Ajustement global pour améliorer la lisibilité */
     line-height: 1.6; /* Espacement entre les lignes */
     background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
 }
@@ -129,4 +129,44 @@ Conteneur principal
     left: 0;
     background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
     z-index: 0; /* En arrière-plan par rapport au contenu */
+}
+/* Pour les tablettes */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 2%; /* Affinage du padding pour économiser l'espace */
+        margin: 5% auto; /* Maintien de la marge pour centrer le conteneur */
+        border-width: 5px; /* Maintien pour la cohérence visuelle */
+        border-radius: 10px; /* Maintien pour la cohérence visuelle */
+        max-width: 90%; /* Maintien pour une largeur optimale */
+    }
+    .side-menu {
+        width: 100%; /* Pleine largeur pour éviter l'encombrement, avec une limite max */
+        max-width: 300px; /* Limite pour éviter que le menu ne soit trop large */
+    }
+    /* Pas de changements majeurs nécessaires ici, vos ajustements sont solides. */
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: calc(12px + 2vw); /* Bon ajustement pour augmenter la lisibilité */
+    }
+    .container {
+        padding: 10px; /* Ajustement pour augmenter l'espace disponible */
+        border-width: 2px; /* Réduction pour un look plus fin */
+        border-radius: 5px; /* Ajustement pour un look plus adapté aux petits écrans */
+        max-width: 95%; /* Utilisation maximale de l'espace écran */
+        margin: 20px auto; /* Réduction de la marge pour utiliser l'espace plus efficacement */
+    }
+    .side-menu {
+        width: 100%; /* Pleine largeur pour une meilleure accessibilité */
+        max-width: none; /* Adaptation complète à la largeur de l'écran */
+    }
+    .button, .btn {
+        padding: 0.5rem 1rem; /* Taille suffisante pour l'interaction tactile */
+        font-size: 0.875rem; /* Ajustement pour la lisibilité */
+    }
+    .some-element {
+        width: 80%; /* Réduction de la largeur pour le centrer et économiser de l'espace */
+        margin: 0 auto; /* Centrage pour une meilleure apparence */
+    }
 }

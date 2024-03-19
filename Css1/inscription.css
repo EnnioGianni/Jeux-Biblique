@@ -2,11 +2,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Utilise 100% de la hauteur de la fenêtre de visualisation */
-    margin: 0; /* Enlève les marges par défaut */
-    background-image: url('../Images/Ciel.jpg'); /* Ajustez le chemin */
-    background-size: cover; /* Couvre toute la page sans étirer l'image */
-    background-position: center; /* Centre l'image d'arrière-plan */
+    height: 100vh;
+    margin: 0;
+    background-image: url('../Images/Ciel.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .inscription-container {
@@ -16,7 +16,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.9); /* Légèrement transparent */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .form-group {
@@ -46,9 +46,29 @@ body {
     border: none;
 }
 
+/* Téléphones en mode portrait et paysage */
 @media (max-width: 480px) {
     .inscription-container {
         padding: 10px;
         margin: 10px;
+    }
+}
+
+/* Tablettes et petits ordinateurs portables */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .inscription-container {
+        max-width: 600px; /* Plus large pour les tablettes et petits ordinateurs portables */
+        padding: 30px; /* Plus d'espace intérieur */
+    }
+    
+    .form-group label {
+        font-size: 16px; /* Plus grande taille de texte pour améliorer la lisibilité */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="submit"] {
+        padding: 15px; /* Plus grand padding pour une meilleure interaction */
     }
 }

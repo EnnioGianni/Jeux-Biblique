@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,12 +11,14 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
-
 }
-h1{
+
+h1 {
     text-align: center;
     color: #faf7f7;
+    font-size: calc(16px + 2vw); /* Exemple de police adaptable */
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -29,14 +37,14 @@ h1{
 }
 
 .category {
-    padding: 10px;
+    padding: 12px 24px; /* Adapté */
     background-color: #007bff;
     color: white;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.3em;
+    font-size: calc(10px + 1vw); /* Taille de police adaptable */
 }
 
 .dropdown-content {
@@ -67,89 +75,59 @@ h1{
     .container {
         flex-direction: column;
         gap: 10px;
+        padding: 10px;
+        margin-left: 0; /* Annulé pour tablettes */
     }
     .column {
-        width: 100%; /* Les colonnes prennent toute la largeur sur les petits écrans */
+        width: 100%; /* Pleine largeur pour tablettes */
     }
 }
-/* Ajout au CSS existant */
+
+@media (max-width: 480px) {
+    body, html {
+        background: url(../Images/Ciel-mobile.jpg) center center / cover no-repeat fixed; /* Optionnel : Image de fond pour mobile */
+    }
+    .container {
+        margin-left: 10px; /* Ajustement pour smartphones */
+    }
+    .category {
+        padding: 8px 16px; /* Ajustement pour smartphones */
+    }
+    .dropdown-content a {
+        font-size: 14px; /* Amélioration de la lisibilité */
+    }
+}
 
 .toggle-icon {
     margin-right: 5px;
 }
 
-
-
-
- /* Style de base pour le bouton */
- .btn-responsive {
+.btn-responsive {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Adapté */
     background-color: #007bff;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
+    font-size: calc(10px + 1vw); /* Taille de police adaptable */
+}
 
-  .btn-responsive:hover {
+.btn-responsive:hover {
     background-color: #0056b3;
-  }
+}
 
-  /* Media query pour tablettes */
-  @media (max-width: 768px) {
-    .container {
-      margin-left: 100px; /* Ajustez selon le besoin pour tablettes */
-    }
-  }
-
-  /* Media query pour smartphones */
-  @media (max-width: 480px) {
-    .container {
-      margin-left: 20px; /* Ajustez selon le besoin pour smartphones */
-    }
-
-    .btn-responsive {
-      padding: 8px 16px; /* Plus petit padding pour les petits écrans */
-    }
-  }
-
-  .menu-image {
+.menu-image {
     max-width: 100%;
     height: auto;
     display: block; /* Pour centrer l'image si nécessaire */
     margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
-  }
-  
-  /* Exemple de media query pour ajuster le style de l'image sur de petits écrans */
-  @media (max-width: 600px) {
+}
+
+/* Exemple de media query pour ajuster le style de l'image sur de petits écrans */
+@media (max-width: 600px) {
     .menu-image {
-        width: 50%; /* Réduit la taille de l'image sur les petits écrans */
+        width: 100%; /* Pleine largeur pour les images sur smartphones */
     }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+}

@@ -7,6 +7,7 @@
 }
 body {
   background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;  color: #f7f9f9;
+  font-size: calc(12px + 0.5vw); /* Ajuste dynamiquement la taille de la police */
 }
 h1{
   text-align: center;
@@ -418,3 +419,49 @@ h1{
     cursor: pointer; /* Changer le curseur pour indiquer que l'élément est cliquable */
 }
 
+/* Pour les tablettes */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: calc(14px + 0.5vw); /* Taille de police ajustée dynamiquement */
+    }
+    .container {
+        padding: 2%; /* Utilise un pourcentage pour le padding */
+        margin: 5% auto;
+        border-width: 5px;
+        border-radius: 10px;
+    }
+    h1 {
+        font-size: 1.5rem; /* Utilisation de rem pour la taille de la police */
+    }
+    select, button {
+        padding: 0.5rem; /* Padding en rem */
+    }
+    .button, .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+    .side-menu {
+        width: 20%; /* Largeur en pourcentage pour une meilleure flexibilité */
+    }
+}
+
+/* Pour les téléphones */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: calc(12px + 1vw); /* Encore plus dynamique pour les petits écrans */
+    }
+    .container {
+        border-width: 2px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 1.25rem;
+    }
+    .button, .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    .side-menu {
+        width: 30%; /* Adaptation à des écrans très petits */
+    }
+}

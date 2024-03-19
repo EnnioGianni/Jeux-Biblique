@@ -122,23 +122,57 @@ a:hover {
 
 /* Styles pour rendre la page responsive */
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Taille de police ajustée */
+    }
+    .container {
+        padding: 10px;
+        margin: 20px auto;
+        border-width: 5px; /* Bordure plus fine pour économiser de l'espace */
+        border-radius: 10px;
+    }
     h1 {
-        font-size: 1em;
+        font-size: 1.2em; /* Taille ajustée pour les titres */
+        margin: 10px 0; /* Moins d'espace au-dessus du h1 */
     }
-
-    p {
-        font-size: 16px;
+    p, label {
+        font-size: 14px; /* Taille de police ajustée */
     }
-
-    .button {
-        font-size: 18px;
-        padding: 12px 24px;
+    select, button {
+        padding: 8px; /* Padding ajusté */
+        margin-bottom: 20px; /* Moins d'espace entre les éléments */
+    }
+    .button, .btn {
+        padding: 12px 20px; /* Boutons plus petits */
+        font-size: 16px; /* Taille de police ajustée */
+    }
+    .side-menu {
+        width: 200px; /* Menu latéral plus étroit */
+    }
+    .hamburger-menu .bar {
+        margin: 3px 0 0 10px; /* Ajustement des espaces dans le menu hamburger */
     }
 }
 
-
-
-
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Encore plus petit pour les téléphones */
+    }
+    .container {
+        border-width: 2px;
+        border-radius: 5px;
+    }
+    h1 {
+        font-size: 1em; /* Plus petit sur les téléphones */
+    }
+    .button, .btn {
+        padding: 10px 15px;
+        font-size: 14px; /* Boutons ajustés pour les écrans plus petits */
+    }
+    .side-menu {
+        width: 150px; /* Menu encore plus étroit pour les petits écrans */
+    }
+}
 
 /* Styles pour le menu hamburger */
 .hamburger-menu {
