@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 //Psaumes            
               {
+                name: "Josué",
+                subSubcategories: [
+                  { name: "Josué ch. 1", url: "./BIBLE/5Josue/1_josue.html" }, // Exemple de lien correctement mis
+                  // { name: "Psaume 18", url: "./BIBLE/4Psaumes/18em_Psaumes.html" }, // Exemple de lien correctement mis
+                    // Ajouter d'autres sous-sous-catégories ici
+                ]
+            },
+              {
                 name: "Psaumes",
                 subSubcategories: [
                   { name: "Psaumes", url: "./BIBLE/4Psaumes/1_Psaumes.html" }, // Exemple de lien correctement mis

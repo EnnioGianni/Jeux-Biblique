@@ -52,8 +52,8 @@ var questions = [
   }
 ];
 
-var indexQuestionActuelle = 0; // Index pour suivre la question actuelle
-var tentatives = 1; // Nombre de tentatives pour chaque question
+var indexQuestionActuelle = 1; // Index pour suivre la question actuelle
+var tentatives = 0; // Nombre de tentatives pour chaque question
 
 var score = 0; // Pour suivre le nombre de réponses correctes
 

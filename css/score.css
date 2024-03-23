@@ -15,6 +15,8 @@ table {
     max-width: 100%; /* Prévient le dépassement du tableau */
     border-collapse: collapse;
     margin: 20px 0; /* Espacement autour du tableau */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+
 }
 
 th, td {
@@ -49,28 +51,35 @@ p{color: #000;}
 .color-9 { background-color: #0a0a0a; }
 .color-10 { background-color: #0a0a0a; }
 
-/* Adaptation pour les petits écrans */
-@media (max-width: 768px) {
+/* Adaptation pour les tablettes */
+@media (max-width: 1024px) {
     th, td {
-        padding: 4px; /* Réduit le padding */
-        min-width: 40px; /* Réduit la largeur minimum pour économiser l'espace */
-        font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
+        padding: 6px; /* Ajustement du padding pour tablettes */
+        font-size: 14px; /* Ajustement de la taille de la police pour tablettes */
     }
 }
 
+/* Adaptation pour les petits écrans, incluant les smartphones */
+@media (max-width: 768px) {
+    th, td {
+        padding: 4px; /* Réduit le padding pour économiser l'espace */
+        min-width: 40px; /* Réduit la largeur minimum */
+        font-size: 12px; /* Taille de police adaptée */
+    }
+}
+
+/* Adaptation supplémentaire pour les très petits écrans (smartphones en orientation portrait) */
 @media (max-width: 480px) {
-    /* Ajustements supplémentaires pour les très petits écrans */
-    table {
-        width: 100%;
+    body {
+        padding: 5px; /* Réduit le padding du corps pour maximiser l'espace */
     }
 
     th, td {
         padding: 2px; /* Padding encore plus réduit */
-        min-width: 30px; /* Plus petite largeur minimum pour maximiser l'espace */
-        font-size: 10px; /* Taille de police réduite pour les très petits écrans */
+        min-width: 30px; /* Plus petite largeur minimum */
+        font-size: 10px; /* Taille de police plus petite pour les écrans très réduits */
     }
 }
-
 
 
 

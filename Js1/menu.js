@@ -39,6 +39,13 @@ $("li.accordion span").click(function () {
         nombreArticles: 2
       },
       {
+        id: "Josue",
+        text: "Josue",
+        href: "../../BIBLE/5Josue/1_Josue.html",
+        // href: "../../BIBLE/4Psaumes/18em_Psaumes.html",
+        nombreArticles: 1
+      },
+      {
         id: "Exode",
         text: "Exode",
         href: "../../BIBLE/2Exode/1_exode.html",
