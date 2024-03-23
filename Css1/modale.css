@@ -429,4 +429,91 @@ footer {
   border-left: 0.25em solid #222;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .modal-content, .popup-content {
+    width: 70%; /* Plus large pour les tablettes */
+  }
+  .closebtn {
+    font-size: 18px; /* Légèrement plus petit pour économiser de l'espace */
+  }
+  .popup-link a {
+    padding: 8px 24px; /* Légèrement réduit */
+    font-size: 14px; /* Taille de police ajustée */
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-content, .popup-content {
+    width: 90%; /* Encore plus large pour s'adapter à l'écran étroit */
+    padding: 15px; /* Plus de padding pour une meilleure lisibilité */
+  }
+  .closebtn {
+    font-size: 16px; /* Ajuster la taille de la police pour de meilleurs contrôles tactiles */
+  }
+  .popup-link a {
+    padding: 10px 20px;
+    font-size: 12px; /* Taille de police réduite pour s'adapter à plus de liens */
+    margin: 10px; /* Réduit l'espacement pour une meilleure utilisation de l'espace */
+  }
+  header, footer {
+    font-size: 18px; /* Augmenter la taille de la police pour une meilleure lisibilité */
+  }
+}
+/* Styles existants... */
+
+/* Media Queries pour Tablettes */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal-content {
+      width: 70%; /* Ajuster la largeur pour les tablettes */
+  }
+  .popup-content {
+      width: 80%; /* Augmenter la largeur du contenu popup pour mieux s'adapter aux écrans des tablettes */
+  }
+  .dropdown-content, .dropdown1-content {
+      min-width: 150px; /* Ajuster la largeur minimum des menus déroulants */
+  }
+  /* Ajuster la taille du texte ou d'autres propriétés pour améliorer la lisibilité et l'interaction sur tablette */
+  .modal-dialog .modal-content, .popup-content p {
+      font-size: 18px; /* Augmenter la taille de la police pour une meilleure lisibilité */
+  }
+  /* Ajustements supplémentaires pour les éléments spécifiques à votre design peuvent être ajoutés ici */
+}
+
+/* Vous pouvez ajouter d'autres media queries ici pour des ajustements plus spécifiques si nécessaire */
+/* Styles existants... */
+
+/* Media Queries pour les écrans jusqu'à 480px */
+@media (max-width: 480px) {
+  .modal-content, .popup-content {
+      width: 90%; /* Ajuster la largeur pour mieux s'adapter aux petits écrans */
+      padding: 10px; /* Réduire le padding pour maximiser l'espace disponible */
+  }
+  .modal-dialog, .popup-container {
+      padding: 0 5px; /* Ajuster le padding autour des dialogues modaux et des contenus popup */
+  }
+  .dropdown-content, .dropdown1-content {
+      min-width: 120px; /* Ajuster la largeur minimum des menus déroulants pour les petits écrans */
+  }
+  /* Réduire la taille de la police pour économiser de l'espace, tout en restant lisible */
+  body, .modal-dialog .modal-content, .popup-content p {
+      font-size: 14px;
+  }
+  header, footer {
+      font-size: 18px; /* Taille de police ajustée pour les en-têtes et pieds de page */
+  }
+  /* Ajuster les boutons pour qu'ils soient plus facilement cliquables sur écran tactile */
+  .closebtn, .popup-link a, .dropdown-content a, .dropdown1-content a {
+      padding: 12px; /* Augmenter le padding pour de meilleures zones de clic */
+      font-size: 16px; /* Augmenter la taille de la police pour une meilleure visibilité */
+  }
+  /* Ajustements pour le texte clignotant pour assurer qu'il reste visible et attractif */
+  #a {
+      font-size: 16px;
+  }
+  /* Assurez-vous que tous les contenus sont visibles sans débordement horizontal */
+  .container, .popup-content {
+      overflow-x: hidden; /* Cache les débordements horizontaux */
+  }
+}
+
+/* Vous pouvez ajouter d'autres media queries ici pour des ajustements plus spécifiques si nécessaire */
 

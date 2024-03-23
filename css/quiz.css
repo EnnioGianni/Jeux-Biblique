@@ -7,6 +7,7 @@
 }
 body {
 	background-color: #0a69ed;
+	font-size: 16px; /* Taille de base pour la lisibilité */
 }
 .start-screen,
 .score-container {
@@ -137,4 +138,55 @@ i.fab {
 	body {
 		font-size: 12px;
 	}
+}
+
+
+/* Style de base (mobile-first) */
+body {
+    font-size: 16px; /* Taille de base pour la lisibilité */
+}
+.container, .side-menu, .wide-content {
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+    overflow-x: auto; /* Permet le défilement horizontal pour les contenus larges */
+}
+.button, .btn, h1 {
+    font-size: 1em;
+    padding: 10px 15px;
+}
+.side-menu {
+    width: auto; /* Largeur automatique pour les petits écrans */
+    overflow-y: auto; /* Défilement vertical pour le menu */
+}
+
+/* Petits écrans, typiquement téléphones en portrait (moins de 480px) */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .wide-content {
+        width: 100%; /* Assure que le conteneur s'adapte à la largeur de l'écran */
+    }
+    .side-menu {
+        width: 150px; /* Largeur fixe pour les petits écrans */
+    }
+}
+
+/* Tablettes en portrait et paysage (de 481px à 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 14px; /* Taille de police légèrement augmentée pour les tablettes */
+    }
+    .side-menu {
+        width: 200px; /* Largeur ajustée pour les tablettes */
+    }
+}
+
+/* Grands écrans, typiquement ordinateurs de bureau (plus de 1024px) */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Taille de police augmentée pour les grands écrans */
+    }
+    .side-menu {
+        width: 250px; /* Largeur ajustée pour les grands écrans */
+    }
 }

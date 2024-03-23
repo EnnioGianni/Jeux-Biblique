@@ -137,3 +137,48 @@ button:hover {
     background-color: #024906;
   }
   
+  /* Style par défaut pour les ordinateurs de bureau et autres grands écrans */
+
+/* Votre CSS existant ici */
+
+/* Media query pour les tablettes */
+@media (max-width: 768px) {
+    #hamburger-icon {
+        font-size: 24px; /* Réduction de la taille de l'icône */
+    }
+
+    .sidebar {
+        padding-top: 50px; /* Ajustement de l'espacement en haut */
+    }
+
+    .sidebar a, button, .special-button {
+        font-size: 20px; /* Réduction de la taille du texte pour les liens et boutons */
+        padding: 15px; /* Ajustement du padding */
+        width: 180px; /* Réduction de la largeur des boutons */
+    }
+
+    .closebtn {
+        font-size: 30px; /* Réduction de la taille de l'icône de fermeture */
+    }
+}
+
+/* Media query pour les smartphones */
+@media (max-width: 480px) {
+    #hamburger-icon {
+        font-size: 20px; /* Plus petite icône pour les smartphones */
+    }
+
+    .sidebar {
+        padding-top: 45px; /* Ajustement de l'espacement en haut pour les smartphones */
+    }
+
+    .sidebar a, button, .special-button {
+        font-size: 18px; /* Taille du texte encore plus petite pour une meilleure lisibilité */
+        padding: 10px; /* Ajustement du padding */
+        width: 160px; /* Ajustement de la largeur des boutons pour s'adapter aux écrans plus petits */
+    }
+
+    .closebtn {
+        font-size: 28px; /* Plus petite icône de fermeture pour les smartphones */
+    }
+}

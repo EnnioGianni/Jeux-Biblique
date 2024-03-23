@@ -13,14 +13,15 @@
 }
 
 .modal-content {
-  margin: auto; /* Centrer la modale dans le conteneur flex */
-  padding: 20px; /* Espacement à l'intérieur de la modale */
-  background: white; /* Couleur de fond de la modale */
-  border-radius: 5px; /* Bords arrondis */
-  width: 80%; /* Largeur de la modale, ajustez selon le besoin */
-  max-width: 500px; /* Largeur maximale pour les écrans larges */
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  display: inline-block; /* Adaptation pour contenu */
+  text-align: center;
 }
-
   #p{
     color: #000;
   }
@@ -67,4 +68,25 @@
     visibility: visible;
     opacity: 1;
   }
-  
+  /* Responsive adjustments */
+@media (max-width: 768px) { /* Tablettes et en-dessous */
+  .modal-content {
+    width: 90%; /* Plus large pour les petits écrans */
+    padding: 15px; /* Padding ajusté */
+  }
+
+  .button, .subscribe-button, #declineButton {
+    padding: 8px 16px; /* Plus petit padding */
+  }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+  .modal-content {
+    padding: 10px; /* Padding encore plus petit pour les très petits écrans */
+    max-width: none; /* Permet à la modale de s'étendre selon la largeur de l'écran */
+  }
+
+  .button, .subscribe-button, #declineButton {
+    padding: 6px 12px; /* Adaptation du padding pour petits écrans */
+  }
+}

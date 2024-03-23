@@ -95,6 +95,7 @@ h1 {
     }
     .dropdown-content a {
         font-size: 14px; /* Amélioration de la lisibilité */
+        color: #000;
     }
 }
 

@@ -156,21 +156,23 @@ a:hover {
 
 @media only screen and (max-width: 480px) {
     body {
-        font-size: 12px; /* Encore plus petit pour les téléphones */
+        font-size: 12px;
     }
-    .container {
-        border-width: 2px;
-        border-radius: 5px;
+    .container, .side-menu {
+        overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+        overflow-x: auto; /* Permet le défilement horizontal pour les contenus larges */
     }
-    h1 {
-        font-size: 1em; /* Plus petit sur les téléphones */
+    .wide-content {
+        width: 100%; /* Assure que le conteneur s'adapte à la largeur de l'écran */
+        overflow-x: auto; /* Ajoute un défilement horizontal si le contenu interne dépasse */
     }
-    .button, .btn {
+    .button, .btn, h1 {
+        font-size: 1em;
         padding: 10px 15px;
-        font-size: 14px; /* Boutons ajustés pour les écrans plus petits */
     }
     .side-menu {
-        width: 150px; /* Menu encore plus étroit pour les petits écrans */
+        width: 150px;
+        overflow-y: auto; /* Défilement vertical pour le menu */
     }
 }
 
