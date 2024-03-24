@@ -1,0 +1,156 @@
+/* Styles généraux pour le fond et le corps de la page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('chemin_vers_votre_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Styles pour les cadres contenant chaque question et sa réponse */
+.cadre {
+  margin: 15px auto;
+  background-color: rgb(214, 214, 214);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid white;
+}
+
+.cadre p {
+  margin: 0;
+  display: block;
+}
+
+/* Styles pour les boutons */
+.cadre button, #suivantBtn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cadre button:hover, #suivantBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Styles pour les éléments `<i>` */
+.cadre i {
+  display: inline-block;
+  box-shadow: rgb(51, 51, 51) 2px 2px 4px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: -7px;
+  border: 1px solid #ddd;
+}
+
+/* Styles pour le champ de saisie de la réponse de l'utilisateur */
+.cadre input[type="text"] {
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.cadre input[type="text"]:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+#suivantBtn {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .cadre {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .cadre button, #suivantBtn {
+    padding: 8px 16px;
+  }
+
+  .cadre input[type="text"] {
+    width: calc(100% - 24px); /* Ajuster pour plus de padding sur petits écrans */
+  }
+
+  h3 {
+    font-size: 20px; /* Taille de police plus petite pour petits écrans */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cadre {
+    width: 95%;
+    margin: 5px auto;
+  }
+
+  h3 {
+    font-size: 18px; /* Encore plus petit pour les très petits écrans */
+  }
+}
+
+/* Styles pour la vidéo et le texte sur la vidéo, adaptés pour le responsive */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: rgb(10, 10, 10);
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: normal;
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .cadre.responsive {
+    width: 90%; 
+  }
+
+  .responsive-button {
+    padding: 12px 24px; 
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cadre.responsive {
+    width: 95%; 
+  }
+}

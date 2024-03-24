@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/menu.css" />
+    <script src="./JS/1index.js" defer></script>
+    <script src="./JS/menu.js" defer></script>
+    <title>Quiz Interactif</title>
+    <style>
+
+
+
+  </style>
+<a href="../50_50AvecConteneurDefilement.html"></a>
+
+</head>
+<body>
+  <div class="video-container">
+    <h3>Et l’ange m’a montré un fleuve, le fleuve d’eau de la vie, limpide comme du cristal, qui sortait du trône de Dieu et de l’Agneau (Révélation 22:1)</h1>
+    <video id="background-video" autoplay loop muted>
+        <source src="./Video/1Cascade.mp4" type="video/mp4">
+        <!-- Si nécessaire, ajoutez d'autres sources pour les différents formats de vidéo -->
+    </video>
+</div>
+<div id="contenu"></div>
+<!-- <button id="suivantBtn">Question suivante</button> Bouton ajouté directement dans le HTML pour un meilleur contrôle -->
+
+<form id="myForm" onsubmit="return validerForm()" class="cadre" style="display:none">
+  <label>Question : <input type="text" name="question"></label>
+  <br>
+  <label>Réponse : <input type="text" name="reponse"></label>
+  <br>
+  <button type="submit">Valider</button>
+  <button type="button" onclick="fermerForm()">Quitter</button>
+</form>
+</body>
+</html>

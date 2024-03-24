@@ -1,0 +1,53 @@
+/* Style pour le bouton hamburger */
+#hamburgerBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Position sur la droite */
+    z-index: 1001; /* S'assurer qu'il est au-dessus du menu */
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white; /* Ajoute une bordure blanche */
+    border-radius: 5px;
+    font-size: 16px; /* Ajustez la taille du texte selon vos besoins */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ajoute une ombre pour un effet 3D */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour un effet au survol */
+  }
+  
+  #hamburgerBtn:hover {
+    background-color: #0056b3; /* Un peu plus foncé au survol */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Ombre plus prononcée au survol */
+  }
+  
+  /* Style pour le menu caché */
+  .hidden {
+    display: none;
+  }
+  
+  /* Style pour le menu hamburger */
+  #menuHamburger {
+    position: fixed;
+    top: 0;
+    right: 0; /* Glisse depuis la droite */
+    width: 250px; /* Largeur du menu */
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    z-index: 1000; /* Assurer qu'il est en dessous du bouton mais au-dessus du reste */
+    overflow-y: auto; /* Pour le scrolling si nombreux liens */
+  }
+  
+  /* Style pour les liens dans le menu */
+  #menuHamburger a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement */
+  }
+  
+  #menuHamburger a:hover {
+    text-decoration: underline; /* Style au survol */
+  }
+  
