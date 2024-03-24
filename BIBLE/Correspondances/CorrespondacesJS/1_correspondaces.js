@@ -21,7 +21,7 @@ let countdown;
 const quizArray = [
 	{
 		id: "0",
-		question: "Quelle action a faitLe roi Cyrus de Perse? (Esdras 5:2) ",
+		question: "Quelle action a fait Le roi Cyrus de Perse? (Esdras 5:2) ",
 		options: ["Emporté les ustensiles en or et en argent à Jérusalem.", 
 				  "Chargé de construire une maison à Jérusalem.", 
 				  "Pris les ustensiles du temple de Jéhovah à Jérusalem.", 
