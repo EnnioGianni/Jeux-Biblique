@@ -1,23 +1,75 @@
 // Liste des questions à afficher
 var questions = [
+//1
     {
-      enonce: "Combien font 2+2 ?",
-      reponse: "4",
-      indice1: "C'est un résultat arithmétique simple.",
-      indice2: "C'est le double de 2.",
+      enonce: "Où habitait l'homme riche et insensé, marié à Abigaïl?",
+      reponse: "Maon",
+      indice1: "Cette ville se trouve en bordure du désert de Juda.",
+      indice2: "Cette ville se trouve à l'Ouest de la mer Morte.",
     },
-    // {
-    //   enonce: "En quelle année Christophe Colomb a-t-il découvert l'Amérique ?",
-    //   reponse: "1492",
-    //   indice1: "C'est la fin du XVème siècle.",
-    //   indice2: "C'est avant 1500.",
-    // },
-    // {
-    //   enonce: "On me trouve 2 fois dans l'année, 1 fois dans la semaine, mais pas du tout dans le jour... Qui suis-je ?",
-    //   reponse: "La lettre N",
-    //   indice1: "Je suis utilisé dans les mots 'année' et 'semaine'.",
-    //   indice2: "Je suis souvent la dernière lettre dans un mot.",
-    // }
+//2
+    {
+      enonce: "Combien d'années le fils du roi Yotham de Juda, a-t-il régné sur Juda ?",
+      reponse: "16 ans (2 Rois 16:2)",
+      indice1: "Sa durée est une période qui marque l'adolescence.",
+      indice2: "Son règne a duré suffisamment longtemps pour voir deux générations grandir.",
+    },
+//3    
+    {
+      enonce: "Quelle est l'origine familiale de Nabal ?",
+      reponse: "Calébite c’est-à-dire descendant de Caleb (1 Samuel 25:3) ",
+      indice1: "Il descend d'une figure biblique associée à la force et la fidélité.",
+      indice2: "Son ascendance est liée à un nom qui commence par C. ",
+    },
+//4    
+    {
+      enonce: "Dans quelle région Nabal faisait-il paître et tondre ses troupeaux? ",
+      reponse: "Karmel de Juda. (1 Samuel 25:2) ",
+      indice1: "Cette région est mentionnée dans le contexte judéen.",
+      indice2: "Le nom de cette région commence par la lettre K. ",
+    },
+//5    
+    {
+      enonce: "Quelle est la signification du nom, Nabal ?",
+      reponse: "Insense, Stupide. (it2 Nabal p.363) ",
+      indice1: "Ce nom est une traduction ou une interprétation de son comportement et de sa personnalité.",
+      indice2: "Ce nom est synonyme de sottise ou de manque de sagesse. ",
+    },
+//6    
+    {
+      enonce: "Après la mort de quel roi et de ses fils Abner a-t-il emmené Ish-Bosheth de l’autre côté du Jourdain ?",
+      reponse: "Saül. (2S 2:8-11; 4:7; 5:4,5.)",
+      indice1: "Ce roi et ses fils sont morts sur le champ de bataille à Guilboa.",
+      indice2: "Il est le prédécesseur de David.",
+    },
+//7    
+    {
+      enonce: "Où Abner a-t-il emmené Ish-Bosheth pour le faire roi ?",
+      reponse: "Mahanaïm, où il fut fait roi. (2S 2:8.)",
+      indice1: "Cet endroit se trouve de l’autre côté du Jourdain.",
+      indice2: "Le nom de cet endroit commence par M.",
+    },
+//8   
+    {
+      enonce: "Sur combien de tribus Ish-Bosheth fut-il fait roi, à l'exception de laquelle ?",
+      reponse: "Boaz et de Ruth. (2S 2:8-11.)",
+      indice1: "Ce nombre inclut toutes les tribus sauf une.",
+      indice2: "La tribu exclue est celle qui reconnaissait déjà un autre roi.",
+    },
+//9   
+    {
+      enonce: "De quels ancêtres David est-il directement descendu ?",
+      reponse: "Toutes les tribus à l’exception de Juda. (Ru 4:18-22 ; Mt 1:3-6.)",
+      indice1: "L'une des personnes mentionnées est une femme célèbre pour sa loyauté et son amour.",
+      indice2: "L'autre est connu pour son rôle dans une histoire d'amour et de rédemption.",
+    },
+//10   
+    {
+      enonce: "DQuelle est la caractéristique principale du fleuve d'eau de la vie vu dans la vision par Jean ?",
+      reponse: "Limpide comme du cristal (Révélation 22:1)",
+      indice1: "Cette caractéristique le décrit comme étant extrêmement clair et pur.",
+      indice2: "l est comparé à une pierre précieuse en termes de transparence.",
+    }
   ];
   
   var indexQuestionActuelle = 0; // Index pour suivre la question actuelle
@@ -52,6 +104,7 @@ var questions = [
     divElt.style.width = '80%';
     divElt.style.zIndex = "1000";
     divElt.style.backgroundColor = "#F5E3A5";
+    
   
     var strongElt = document.createElement("strong");
     strongElt.textContent = "Question " + (indexQuestionActuelle + 1) + " : ";
@@ -99,44 +152,98 @@ var questions = [
   reponseElt.style.display = "none";
   divElt.appendChild(reponseElt);
 
-  buttonElt.addEventListener("click", function () {
-    if (inputReponse.value.trim() === el.reponse) {
+  function afficherModalReponseCorrecte() {
+    var modal = document.createElement("div");
+    modal.style.position = "fixed";
+    modal.style.top = "50%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%)";
+    modal.style.backgroundColor = "#76EB5E";
+    modal.style.padding = "20px";
+    modal.style.border = "1px solid #ccc";
+    modal.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
+    modal.style.zIndex = "2000";
+  
+    var modalContent = document.createElement("p");
+    modalContent.textContent = "C'est juste! Bravo!";
+  
+    var okButton = document.createElement("button");
+    okButton.textContent = "OK";
+    okButton.onclick = function() {
+      modal.parentNode.removeChild(modal);
+    };
+  
+    modal.appendChild(modalContent);
+    modal.appendChild(okButton);
+  
+    document.body.appendChild(modal);
+  }
+
+// Cette fonction retourne maintenant un objet contenant la réponse nettoyée et son type (phrase ou nombre)
+function nettoyerReponse(reponse) {
+  let reponseNettoyee = reponse.replace(/\(.*?\)/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").trim().toLowerCase();
+  // Détermine si la réponse nettoyée est un nombre
+  let estNombre = !isNaN(parseFloat(reponseNettoyee)) && isFinite(reponseNettoyee);
+  
+  return {
+    reponseNettoyee: reponseNettoyee,
+    type: estNombre ? 'nombre' : 'phrase'
+  };
+}
+
+// Ajustement de la vérification pour accepter les correspondances partielles pour les phrases
+buttonElt.addEventListener("click", function () {
+  // Vérifie si la réponse de l'utilisateur est vide
+  if (inputReponse.value.trim() === '') {
+    afficherModal("Répondez à la question avant de poursuivre.");
+    return; // Stoppe l'exécution de la fonction ici pour ne pas procéder à la vérification
+  }
+
+  var nettoyageUtilisateur = nettoyerReponse(inputReponse.value);
+  var nettoyageAttendu = nettoyerReponse(el.reponse);
+
+  let estCorrect = false;
+  if (nettoyageAttendu.type === 'nombre') {
+    estCorrect = nettoyageUtilisateur.reponseNettoyee === nettoyageAttendu.reponseNettoyee;
+  } else {
+    estCorrect = nettoyageAttendu.reponseNettoyee.includes(nettoyageUtilisateur.reponseNettoyee);
+  }
+
+  if (estCorrect) {
+    afficherModalReponseCorrecte();
+    buttonElt.disabled = true;
+    suivantBtnLocal.style.display = "inline-block";
+  } else {
+    tentatives--;
+    if (tentatives === 2) {
+      indice1.style.display = "block";
+    } else if (tentatives === 1) {
+      indice2.style.display = "block";
+    }
+    if (tentatives > 1) {
+      afficherModal("Il vous reste " + tentatives + " tentatives. Regardez l'indice 1");
+    } else if (tentatives > 0) {
+      afficherModal("Il vous reste " + tentatives + " tentative. Regardez l'indice 2");
+    } else {
+      afficherModal("La bonne réponse est affichée.");
       reponseElt.style.display = "block";
-      reponseElt.style.textAlign = "center";
-      reponseElt.style.width = "100%";
-      buttonElt.textContent = "Réponse correcte!";
       buttonElt.disabled = true;
       suivantBtnLocal.style.display = "inline-block";
-    } else {
-      tentatives--;
-      if (tentatives === 2) {
-        indice1.style.display = "block";
-      } else if (tentatives === 1) {
-        indice2.style.display = "block";
-      }
-      if (tentatives > 0) {
-        afficherModal("Incorrect. Il vous reste " + tentatives + " tentatives.");
-      } else {
-        afficherModal("Plus de tentatives. La bonne réponse était : " + el.reponse);
-        reponseElt.style.display = "block";
-        reponseElt.style.textAlign = "center";
-        reponseElt.style.width = "100%";
-        buttonElt.disabled = true;
-        suivantBtnLocal.style.display = "inline-block";
-      }
     }
-  });
+  }
+});
 
-  suivantBtnLocal.addEventListener("click", function() {
-    if (indexQuestionActuelle < questions.length - 1) {
-      indexQuestionActuelle++;
-      tentatives = 3;
-      afficherQuestion();
-    } else {
-      afficherModalFinJeu("C'était la dernière question !");
-      suivantBtnLocal.style.display = "none";
-    }
-  });
+
+suivantBtnLocal.addEventListener("click", function() {
+  if (indexQuestionActuelle < questions.length - 1) {
+    indexQuestionActuelle++;
+    tentatives = 3;
+    afficherQuestion();
+  } else {
+    afficherModalFinJeu("C'était la dernière question !");
+    suivantBtnLocal.style.display = "none";
+  }
+});
 
   contenu.appendChild(divElt);
 }
@@ -153,7 +260,7 @@ function afficherModal(message) {
   modal.style.top = "50%";
   modal.style.left = "50%";
   modal.style.transform = "translate(-50%, -50%)";
-  modal.style.backgroundColor = "#FFF";
+  modal.style.backgroundColor = "#76EB5E";
   modal.style.padding = "20px";
   modal.style.border = "1px solid #ccc";
   modal.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
@@ -161,6 +268,7 @@ function afficherModal(message) {
 
   var modalContent = document.createElement("p");
   modalContent.textContent = message;
+
 
   var closeButton = document.createElement("button");
   closeButton.textContent = "Fermé";
@@ -199,23 +307,9 @@ function afficherModalFinJeu(message) {
     afficherQuestion();
     modalFin.parentNode.removeChild(modalFin);
   };
-  // modalFin.appendChild(recommencerBtn);
-
-  // var nouvellesQuestionsLink = document.createElement("a");
-  // nouvellesQuestionsLink.textContent = "Vers de nouvelles questions";
-  // nouvellesQuestionsLink.href = "../50_50AvecConteneurDefilement.html"; // Remplacez par l'URL réelle de la page de nouvelles questions
-  // nouvellesQuestionsLink.style.display = "block";
-  // nouvellesQuestionsLink.style.marginTop = "10px";
-  // modalFin.appendChild(nouvellesQuestionsLink);
-
-  // document.body.appendChild(modalFin);
 }
 
 afficherQuestion();
-
-
-
-
 
 function styleButton(button) {
     button.style.padding = "10px 15px";
@@ -272,5 +366,22 @@ function styleButton(button) {
   }
   
 
-
+  function responsiveStyles() {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      // Tablettes et en dessous
+      divElt.style.width = '90%'; // Utilisez une largeur relative pour s'adapter à l'écran
+      divElt.style.top = '50%';
+      divElt.style.left = '50%';
+      divElt.style.transform = 'translate(-50%, -50%)';
+    } else if (window.matchMedia("(max-width: 480px)").matches) {
+      // Smartphones
+      divElt.style.width = '95%'; // Augmentez la largeur pour les petits écrans
+      // Assurez-vous que le contenu est bien lisible sur de petits appareils
+      divElt.style.fontSize = '14px'; // Diminuez la taille de police pour économiser de l'espace
+    }
+  }
+  
+  // Appliquez cette fonction à chaque élément lors de sa création ou modification pour assurer le responsive design
+  responsiveStyles(); // Appeler cette fonction après la création/modification de chaque élément
+  
   

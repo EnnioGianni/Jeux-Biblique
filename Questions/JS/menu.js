@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ajout des liens au menu
     var liens = [
-        { href: '#', text: 'Lien 1' },
-        { href: '#', text: 'Lien 2' },
-        { href: '#', text: 'Lien 3' },
-        { href: '#', text: 'Lien 4' }
+        { href: '../categories.html', text: 'Categories' },
+        { href: '../index.html', text: 'Accueil' },
+        { href: '../../BIBLE/BibleSommaire.html', text: 'BIBLE' },
+        { href: '../../BIBLE/Personages_Bibliques/sommaire.html', text: 'Personages Bibliques' }
     ];
 
     liens.forEach(function(lien) {

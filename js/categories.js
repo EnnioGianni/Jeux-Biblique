@@ -74,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
   },
   //Questions Libres
   {
-    name: "Questions Libres",
+    name: "Questions simples",
     subcategories: [
       {
-        name: "Questions Libres",
+        name: "Questions simples",
         subSubcategories: [
-          { name: "Questions Libres", url: "./QuestionsLibres/index.html" },
+          { name: "Questions d'ordre général.", url: "./QuestionsLibres/index.html" },
           // { name: "Leçons de vie", url: "./BIBLE/Personages_Bibliques/Guideon/lecons.html" },
         ]
       },
