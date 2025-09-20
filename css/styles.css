@@ -176,3 +176,71 @@ font-family:"Georgia", Arial, sans-serif;
     text-decoration: none;
     color: #333; /* Couleur des liens dans le menu */
 }
+
+
+
+/* Icône hamburger */
+#hamburger-icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Sidebar (menu latéral) */
+.sidebar {
+  height: 100%; 
+  width: 0; /* Fermé par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  transition: 0.4s; 
+  padding-top: 60px;
+  z-index: 1500;
+}
+
+/* Bouton de fermeture */
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Boutons du menu */
+.sidebar .special-button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  background: #444;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar .special-button:hover {
+  background: #666;
+}
+
+/* Responsive : plein écran sur mobile */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 0; /* toujours fermé par défaut */
+  }
+}

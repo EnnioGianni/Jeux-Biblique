@@ -52,14 +52,14 @@ var questions = [
 //8   
     {
       enonce: "Sur combien de tribus Ish-Bosheth fut-il fait roi, à l'exception de laquelle ?",
-      reponse: "Boaz et de Ruth. (2S 2:8-11.)",
+      reponse: "Touttes saus la tribu de Juda. (2S 2:8-11.)",
       indice1: "Ce nombre inclut toutes les tribus sauf une.",
       indice2: "La tribu exclue est celle qui reconnaissait déjà un autre roi.",
     },
 //9   
     {
       enonce: "De quels ancêtres David est-il directement descendu ?",
-      reponse: "Toutes les tribus à l’exception de Juda. (Ru 4:18-22 ; Mt 1:3-6.)",
+      reponse: "Rhut et Boaz. (Ru 4:18-22 ; Mt 1:3-6.)",
       indice1: "L'une des personnes mentionnées est une femme célèbre pour sa loyauté et son amour.",
       indice2: "L'autre est connu pour son rôle dans une histoire d'amour et de rédemption.",
     },
