@@ -10,61 +10,130 @@
     <script src="./Js1/inscription.js" defer></script>
     <script src="./Js/hambourger.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<style>
-  .game-buttons {
-  display: flex;
-  justify-content: space-between;
-}
 
-</style>
+    <style>
+      .game-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* --- Correctifs mobiles & superposition --- */
+      /* Icône hamburger bien au-dessus du contenu… */
+      #hamburger-icon {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1500;           /* …mais en dessous du menu quand il est ouvert */
+        font-size: 30px;
+        padding: 10px 12px;
+        background: #333;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        line-height: 1;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Le menu latéral : occupe l’écran, passe au-dessus du hamburger */
+      #sidebar-menu.sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 0;               /* fermé par défaut (JS bascule à 250px ou 100vw) */
+        overflow-y: auto;
+        background: #111;
+        z-index: 2000;          /* > hamburger pour ne pas bloquer le 1er lien */
+        transition: width 0.35s ease;
+        padding-top: 56px;      /* espace pour la croix */
+      }
+
+      /* Bouton fermer dans le menu */
+      #sidebar-menu .closebtn {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 36px;
+        color: #fff;
+        text-decoration: none;
+        line-height: 1;
+      }
+
+      /* Image en haut du menu : s’assure du bloc et pleine largeur */
+      #sidebar-menu img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* Boutons du menu : confort de tap */
+      #sidebar-menu .special-button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        padding: 14px 16px;
+        background: #444;
+        color: #fff;
+        border: none;
+        text-align: left;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.05s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #sidebar-menu .special-button:active { transform: scale(0.98); }
+      #sidebar-menu .special-button:hover  { background: #666; }
+
+      /* Pleine largeur sur téléphone pour des taps précis */
+      @media (max-width: 768px) {
+        /* rien d’autre à faire ici : la largeur est gérée en JS (100vw) */
+      }
+    </style>
 </head>
 <body>
 
-<!-- Icône du menu hamburger -->
-  <div id="hamburger-icon" onclick="toggleMenu()">
+  <!-- Icône du menu hamburger -->
+  <div id="hamburger-icon" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false" role="button">
     &#9776;
   </div>
 
-<!-- Menu latéral avec boutons stylisés -->
-<div id="sidebar-menu" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+  <!-- Menu latéral avec boutons stylisés -->
+  <div id="sidebar-menu" class="sidebar" aria-hidden="true">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()" aria-label="Fermer le menu">&times;</a>
     <!-- Image ajoutée au-dessus du premier lien -->
-  <img src="./Images/Bible2.jpg" alt="Description de l'image" style="width:100%;">
+    <img src="./Images/Bible2.jpg" alt="Description de l'image" style="width:100%;">
     <button class="special-button" onclick="location.href='./BIBLE/bibleSommaire.html'"><span>Lien 1 &#x1F59D;</span></button>
     <button class="special-button" onclick="location.href='#'"><span>Lien 2 &#x1F59D;</span></button>
     <button class="special-button" onclick="location.href='#'"><span>Lien 3 &#x1F59D;</span></button>
     <button class="special-button" onclick="location.href='#'"><span>Lien 4 &#x1F59D;</span></button>
     <button class="special-button" onclick="location.href='#'"><span>Lien 5 &#x1F59D;</span></button>
-</div>
-
-
- 
-<div class="modal-background" id="subscribeModal">
-  <div class="modal-content">
-    <p id="p">Abonne-toi pour ne rien manquer !</p>
-    <button id="declineButton" class="button">Non merci</button>
-    <a href="./inscription.html" class="subscribe-button">Je m'abonne</a>
-    <!-- Nouvel élément pour les utilisateurs déjà inscrits -->
-    <p style="color: black;"><button id="loginButton" class="button">Connectez-vous</button></p>
   </div>
-</div>
 
-<!-- Modale de connexion -->
-<div class="modal-background" id="loginModal" style="visibility: hidden; opacity: 0;">
-  <div class="modal-content">
-    <form id="loginForm">
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
-      <label for="password">Mot de passe :</label>
-      <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
-      <button type="submit">Se connecter</button>
-      <button type="button" id="closeLoginModal" class="button">Fermer</button>
-    </form>
+  <div class="modal-background" id="subscribeModal">
+    <div class="modal-content">
+      <p id="p">Abonne-toi pour ne rien manquer !</p>
+      <button id="declineButton" class="button">Non merci</button>
+      <a href="./inscription.html" class="subscribe-button">Je m'abonne</a>
+      <p style="color: black;"><button id="loginButton" class="button">Connectez-vous</button></p>
+    </div>
   </div>
-</div>  
-  
-  
-<article class="container">
+
+  <!-- Modale de connexion -->
+  <div class="modal-background" id="loginModal" style="visibility: hidden; opacity: 0;">
+    <div class="modal-content">
+      <form id="loginForm">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+        <button type="submit">Se connecter</button>
+        <button type="button" id="closeLoginModal" class="button">Fermer</button>
+      </form>
+    </div>
+  </div>  
+
+  <article class="container">
     <section class="intro flow">
       <h3>Jeu Biblique<br>Testez Votre Connaissance de la Bible</h3>
       <p>
@@ -76,53 +145,70 @@
         <a href="./score.html">En groupe &#x1F59D;</a>
       </div>
 
-  </section>
-<section class="details" aria-labelledby="explication-titre">
-  <!-- Titre global de la section -->
-  <header>
-    <h2 id="explication-titre" style="font-size:20px;margin:0;">
-      Explication du jeu
-    </h2>
-  </header>      
+    </section>
+
+    <section class="details" aria-labelledby="explication-titre">
+      <header>
+        <h2 id="explication-titre" style="font-size:20px;margin:0;">
+          Explication du jeu
+        </h2>
+      </header>      
+
       <div class="scroll-container">
-<article class="scroll-content">
-  <h2>Règles du jeu-questionnaire biblique</h2><br><br> <!-- ✅ Titre ajouté -->
-  
-  <p>
-    Vous avez devant vous un jeu-questionnaire passionnant basé sur la Bible. 
-    C'est un défi conçu spécialement pour vous, pour tester vos connaissances 
-    sur les histoires, les personnages, et les enseignements de la Bible, 
-    tout en vous amusant. Voici comment ça fonctionne :
-  </p>
-  
-  <ol>
-    <li><b>Début :</b> On te présente une série de 10 questions. Chaque question explore un aspect différent de la Bible, te donnant l'opportunité de montrer ce que tu sais.</li>
-    <li><b>Le Chronomètre :</b> Pour chaque question, tu as 20 secondes pour choisir ta réponse. C'est rapide, donc tu dois être à la fois rapide et précis dans tes réponses.</li>
-    <li><b>Feedback Immédiat :</b> Après avoir choisi ta réponse, tu sauras immédiatement si tu as raison ou non. Si ta réponse est correcte, la question s'illumine en vert ; sinon, elle devient rouge. Cela te permet de savoir sur quels aspects de la Bible tu es solide et lesquels tu pourrais vouloir réviser.</li>
-    <li><b>Score :</b> À la fin des 10 questions, ton score total s'affiche. C'est ta chance de voir combien de réponses correctes tu as obtenues sur 10.</li>
-    <li><b>Rejouer ou Progresser :</b> Une fois le quiz terminé, tu peux choisir de rejouer le même ensemble de questions pour améliorer ton score ou de passer à un nouveau set pour continuer à tester et à étendre tes connaissances.</li>
-    <li><b>Explorer Plus :</b> Une fois que tu as terminé ton quiz et vu ton score, tu n'as pas à t'arrêter là. Tu as l'option de passer à une autre série de questions. Cela signifie que tu peux continuer à tester tes connaissances sur différents aspects de la Bible, allant de questions sur des histoires spécifiques à des enseignements plus profonds. Chaque série de questions est une nouvelle opportunité d'apprendre et de découvrir. Que tu cherches à te spécialiser dans un livre particulier de la Bible ou que tu veuilles avoir une compréhension plus large, il y a toujours plus à explorer. Cela rend le jeu infiniment rejouable et enrichissant, te permettant de continuer à grandir dans ta compréhension et ton appréciation de la Bible.</li>
-    <li>Le jeu-questionnaire sur la Bible est conçu pour être joué soit individuellement, soit en groupe, offrant une expérience personnalisable et interactive. À la fin de chaque session, vous pouvez suivre un lien menant à une page dédiée à l'enregistrement des scores. Cela permet à chaque joueur ou équipe de noter le résultat, favorisant ainsi un esprit de compétition sain ou simplement le suivi des progrès personnels.</li>
-    <li>Mais aussi, avant de plonger dans le défi des questions, de la page d'accueil, vous avez la possibilité de marquer le coup d'envoi en inscrivant les noms des joueurs ou des équipes sur cette page. Cette étape initiale prépare le terrain pour une aventure collective ou un défi personnel, selon votre choix de mode de jeu.</li>
-    <li>En résumé, le jeu-questionnaire sur la Bible est une invitation à explorer les textes sacrés de manière ludique et interactive, seul ou accompagné, tout en offrant la possibilité de mesurer vos connaissances et de les partager avec d'autres. Préparez-vous à une aventure enrichissante, pleine de découvertes et d'échanges.</li>
-  </ol>
-</article>
+        <article class="scroll-content">
+          <h2>Règles du jeu-questionnaire biblique</h2><br><br>
+          <p>
+            Vous avez devant vous un jeu-questionnaire passionnant basé sur la Bible. 
+            C'est un défi conçu spécialement pour vous, pour tester vos connaissances 
+            sur les histoires, les personnages, et les enseignements de la Bible, 
+            tout en vous amusant. Voici comment ça fonctionne :
+          </p>
+          <ol>
+            <li><b>Début :</b> On te présente une série de 10 questions. Chaque question explore un aspect différent de la Bible, te donnant l'opportunité de montrer ce que tu sais.</li>
+            <li><b>Le Chronomètre :</b> Pour chaque question, tu as 20 secondes pour choisir ta réponse. C'est rapide, donc tu dois être à la fois rapide et précis dans tes réponses.</li>
+            <li><b>Feedback Immédiat :</b> Après avoir choisi ta réponse, tu sauras immédiatement si tu as raison ou non. Si ta réponse est correcte, la question s'illumine en vert ; sinon, elle devient rouge.</li>
+            <li><b>Score :</b> À la fin des 10 questions, ton score total s'affiche.</li>
+            <li><b>Rejouer ou Progresser :</b> Tu peux rejouer ou passer à une nouvelle série.</li>
+            <li><b>Explorer Plus :</b> Accès à d’autres séries pour continuer à apprendre.</li>
+            <li>Jouable individuellement ou en groupe, avec page d’enregistrement des scores.</li>
+            <li>Inscrivez les noms des joueurs/équipes dès la page d’accueil.</li>
+            <li>En résumé : une façon ludique et interactive d’explorer les textes sacrés.</li>
+          </ol>
+        </article>
       </div>
-        <footer>&copy; Tous droits réservés</footer>
+      <footer>&copy; Tous droits réservés</footer>
     </section>
   </article>
 
   <script>
-// Fonction pour ouvrir/fermer le menu
-function toggleMenu() {
-  let sidebar = document.getElementById("sidebar-menu");
-  if (sidebar.style.width === "250px") {
-    sidebar.style.width = "0";
-  } else {
-    sidebar.style.width = "250px"; // largeur du menu ouvert
-  }
-}
-</script>
+    // ===== Correctif d'ouverture/fermeture du menu (commenté ligne à ligne) =====
+    function toggleMenu() {
+      const sidebar   = document.getElementById("sidebar-menu");  // le menu
+      const hamburger = document.getElementById("hamburger-icon"); // l’icône
+
+      // Largeur cible : 100% de l’écran sur mobile, 250px sur desktop
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const openWidth = isMobile ? "100vw" : "250px";
+
+      // État actuel (ouvert si width = openWidth)
+      const isOpen = sidebar.style.width === openWidth;
+
+      if (isOpen) {
+        // --- Fermer ---
+        sidebar.style.width = "0";                 // cache le menu
+        hamburger.style.pointerEvents = "auto";    // réactive l’icône
+        hamburger.setAttribute("aria-expanded", "false");
+        sidebar.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";         // réactive le scroll de la page
+      } else {
+        // --- Ouvrir ---
+        sidebar.style.width = openWidth;           // affiche le menu (250px ou 100vw)
+        hamburger.style.pointerEvents = "none";    // évite que l’icône capte le clic du 1er lien
+        hamburger.setAttribute("aria-expanded", "true");
+        sidebar.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";   // évite le scroll en arrière-plan
+      }
+    }
+  </script>
 </body>
 </html>
-
