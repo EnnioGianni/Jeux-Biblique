@@ -11,106 +11,149 @@
     <script src="./Js/hambourger.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <style>
-      .game-buttons {
-        display: flex;
-        justify-content: space-between;
-      }
+<style>
+    /* Styles pour le menu latéral et les éléments associés */
+    :root {
+      --menu-width: 320px;
+      --z-hamburger: 10000;
+      --z-menu: 9999;
+      --z-backdrop: 9998;
+    }
 
-      /* --- Correctifs mobiles & superposition --- */
-      /* Icône hamburger bien au-dessus du contenu… */
-      #hamburger-icon {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 1500;           /* …mais en dessous du menu quand il est ouvert */
-        font-size: 30px;
-        padding: 10px 12px;
-        background: #333;
-        color: #fff;
-        border-radius: 8px;
-        cursor: pointer;
-        line-height: 1;
-        -webkit-tap-highlight-color: transparent;
-      }
+    body.no-scroll {
+      overflow: hidden;
+    }
 
-      /* Le menu latéral : occupe l’écran, passe au-dessus du hamburger */
-      #sidebar-menu.sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 0;               /* fermé par défaut (JS bascule à 250px ou 100vw) */
-        overflow-y: auto;
-        background: #111;
-        z-index: 2000;          /* > hamburger pour ne pas bloquer le 1er lien */
-        transition: width 0.35s ease;
-        padding-top: 56px;      /* espace pour la croix */
-      }
+    #hamburger-icon {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: var(--z-hamburger);
+      font-size: 30px;
+      padding: 10px 12px;
+      background: #333;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      line-height: 1;
+      -webkit-tap-highlight-color: transparent;
+      border: none;
+    }
 
-      /* Bouton fermer dans le menu */
-      #sidebar-menu .closebtn {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        font-size: 36px;
-        color: #fff;
-        text-decoration: none;
-        line-height: 1;
-      }
+    /* Backdrop - fond sombre derrière le menu */
+    #backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+      z-index: var(--z-backdrop);
+    }
 
-      /* Image en haut du menu : s’assure du bloc et pleine largeur */
-      #sidebar-menu img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
+    #backdrop.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
-      /* Boutons du menu : confort de tap */
-      #sidebar-menu .special-button {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-        padding: 14px 16px;
-        background: #444;
-        color: #fff;
-        border: none;
-        text-align: left;
-        font-size: 18px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background 0.2s ease, transform 0.05s ease;
-        -webkit-tap-highlight-color: transparent;
-      }
-      #sidebar-menu .special-button:active { transform: scale(0.98); }
-      #sidebar-menu .special-button:hover  { background: #666; }
+    /* Sidebar Menu - Menu Latéral */
+    #sidebar-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: min(88vw, var(--menu-width));
+      max-width: 100vw;
+      background: #111;
+      color: #fff;
+      z-index: var(--z-menu);
+      overflow-y: auto;
+      transform: translateX(-100%); /* Menu fermé */
+      transition: transform .35s ease;
+      padding: 56px 12px 20px;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+    }
 
-      /* Pleine largeur sur téléphone pour des taps précis */
-      @media (max-width: 768px) {
-        /* rien d’autre à faire ici : la largeur est gérée en JS (100vw) */
+    #sidebar-menu.is-open {
+      transform: translateX(0); /* Menu ouvert */
+    }
+
+    /* Bouton Fermer */
+    #sidebar-menu .closebtn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 36px;
+      color: #fff;
+      text-decoration: none;
+      line-height: 1;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    /* Lien et boutons du menu */
+    #sidebar-menu .special-button {
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+      padding: 14px 16px;
+      background: #444;
+      color: #fff;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background .2s ease, transform .05s ease;
+    }
+
+    #sidebar-menu .special-button:hover {
+      background: #666;
+    }
+
+    #sidebar-menu .special-button:active {
+      transform: scale(0.98);
+    }
+
+    /* Mobile : Menu complet sur petit écran */
+    @media (max-width: 768px) {
+      #sidebar-menu {
+        width: 100vw;
       }
-    </style>
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Icône du menu hamburger -->
-  <div id="hamburger-icon" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false" role="button">
-    &#9776;
-  </div>
+<!-- Backdrop - fond sombre pour masquer l'arrière-plan -->
+  <div id="backdrop"></div>
 
-  <!-- Menu latéral avec boutons stylisés -->
-  <div id="sidebar-menu" class="sidebar" aria-hidden="true">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()" aria-label="Fermer le menu">&times;</a>
-    <!-- Image ajoutée au-dessus du premier lien -->
-    <img src="./Images/Bible2.jpg" alt="Description de l'image" style="width:100%;">
-<a class="special-button" href="./BIBLE/bibleSommaire.html" role="button">
-  <span>Lien 1 &#x1F59D;</span>
-</a>
-    <button class="special-button" onclick="location.href='#'"><span>Lien 2 &#x1F59D;</span></button>
-    <button class="special-button" onclick="location.href='#'"><span>Lien 3 &#x1F59D;</span></button>
-    <button class="special-button" onclick="location.href='#'"><span>Lien 4 &#x1F59D;</span></button>
-    <button class="special-button" onclick="location.href='#'"><span>Lien 5 &#x1F59D;</span></button>
-  </div>
+  <!-- Menu latéral avec les liens -->
+  <aside id="sidebar-menu" aria-hidden="true">
+    <button class="closebtn" aria-label="Fermer le menu" type="button">&times;</button>
+
+    <!-- Image -->
+    <img src="./Images/Bible2.jpg" alt="Illustration Bible">
+
+    <!-- Liens -->
+    <a class="special-button" href="./BIBLE/bibleSommaire.html" role="button">
+      <span>Lien 1 &#x1F59D;</span>
+    </a>
+    <button class="special-button" type="button" onclick="location.href='#'">
+      <span>Lien 2 &#x1F59D;</span>
+    </button>
+    <button class="special-button" type="button" onclick="location.href='#'">
+      <span>Lien 3 &#x1F59D;</span>
+    </button>
+    <button class="special-button" type="button" onclick="location.href='#'">
+      <span>Lien 4 &#x1F59D;</span>
+    </button>
+    <button class="special-button" type="button" onclick="location.href='#'">
+      <span>Lien 5 &#x1F59D;</span>
+    </button>
+  </aside>
+
 
   <div class="modal-background" id="subscribeModal">
     <div class="modal-content">
@@ -212,5 +255,31 @@
       }
     }
   </script>
+  <script>
+  // Lorsque le hamburger est cliqué, ouvrir ou fermer le menu
+  $('#hamburger-icon').click(function () {
+    $('#sidebar-menu').toggleClass('is-open');  // Ouvre/ferme le menu
+    $('#backdrop').toggleClass('is-active');   // Affiche/masque le fond sombre
+    $('body').toggleClass('no-scroll');        // Empêche le défilement de la page quand le menu est ouvert
+    var isOpen = $('#sidebar-menu').hasClass('is-open');
+    $('#hamburger-icon').attr('aria-expanded', isOpen); // Met à jour l'état de l'icône (ouvert/fermé)
+    $('#sidebar-menu').attr('aria-hidden', !isOpen);    // Met à jour l'ARIA du menu
+  });
+
+  // Fermer le menu si on clique sur le fond sombre
+  $('#backdrop').click(function () {
+    $('#sidebar-menu').removeClass('is-open');
+    $('#backdrop').removeClass('is-active');
+    $('body').removeClass('no-scroll');
+  });
+
+  // Fermer le menu avec le bouton de fermeture
+  $('#sidebar-menu .closebtn').click(function () {
+    $('#sidebar-menu').removeClass('is-open');
+    $('#backdrop').removeClass('is-active');
+    $('body').removeClass('no-scroll');
+  });
+</script>
+
 </body>
 </html>
