@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const categories = [
-    // Exemple pour la catégorie "Bible"
+    // Exemples de catégories avec sous-catégories et sous-sous-catégories (comme avant)
     {
       name: "Bible",
       subcategories: [
@@ -113,6 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
     categoryElement.addEventListener('click', () => {
       const isVisible = dropdown.style.display === 'block';
       closeAllDropdowns(category.name); // Fermer tous les autres menus
+      dropdown.style.display = isVisible ? 'none' : 'block';
+      categoryElement.textContent = category.name + (isVisible ? ' ▼' : ' ▲');
+    });
+
+    // Ajout du support mobile (touchstart pour les appareils tactiles)
+    categoryElement.addEventListener('touchstart', () => {
+      const isVisible = dropdown.style.display === 'block';
+      closeAllDropdowns(category.name);
       dropdown.style.display = isVisible ? 'none' : 'block';
       categoryElement.textContent = category.name + (isVisible ? ' ▼' : ' ▲');
     });
