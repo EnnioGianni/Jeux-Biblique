@@ -1,9 +1,9 @@
-/* Cible tous les éléments pour utiliser le box-sizing global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-/* Mise en page globale */
 body, html {
     margin: 0;
     padding: 0;
@@ -13,14 +13,12 @@ body, html {
     background: url(../Images/Ciel.jpg) center center / cover no-repeat fixed;
 }
 
-/* Ajustement de la taille du texte principal */
 h1 {
     text-align: center;
     color: #faf7f7;
     font-size: calc(16px + 2vw); /* Exemple de police adaptable */
 }
 
-/* Conteneur principal */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +27,6 @@ h1 {
     gap: 20px;
 }
 
-/* Colonnes pour les catégories */
 .column {
     background-color: #f0efee;
     border: 1px solid #ddd;
@@ -37,23 +34,19 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: calc(33.333% - 40px); /* Ajustement pour padding et gap */
     padding: 10px;
-    transition: transform 0.3s ease; /* Animation au survol pour desktop */
 }
 
-/* Styles pour la catégorie principale */
 .category {
-    padding: 12px 24px;
+    padding: 12px 24px; /* Adapté */
     background-color: #007bff;
     color: white;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
-    font-size: calc(10px + 1vw); /* Police dynamique */
-    transition: background-color 0.3s ease;
+    font-size: calc(10px + 1vw); /* Taille de police adaptable */
 }
 
-/* Sous-menus (dropdown-content) */
 .dropdown-content {
     display: none;
     padding: 10px;
@@ -67,6 +60,10 @@ h1 {
     text-decoration: none;
     color: #333;
     border-radius: 3px;
+}
+
+/* Ajout de transitions pour une meilleure expérience utilisateur */
+.category, .dropdown-content a {
     transition: background-color 0.3s ease;
 }
 
@@ -74,81 +71,64 @@ h1 {
     background-color: #0056b3;
 }
 
-/* Responsivité : tablettes */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
+        margin-left: 0; /* Annulé pour tablettes */
     }
-
     .column {
-        width: 100%; /* Pleine largeur sur tablettes */
-        transform: none; /* Retire l'animation de transformation sur mobile */
-    }
-
-    .category {
-        font-size: calc(12px + 2vw); /* Ajuste la taille des polices pour mobile */
+        width: 100%; /* Pleine largeur pour tablettes */
     }
 }
 
-/* Responsivité pour les petits écrans (smartphones) */
 @media (max-width: 480px) {
     body, html {
-        background: url(../Images/Ciel-mobile.jpg) center center / cover no-repeat fixed; /* Image différente pour mobile */
+        background: url(../Images/Ciel-mobile.jpg) center center / cover no-repeat fixed; /* Optionnel : Image de fond pour mobile */
     }
-
     .container {
-        margin-left: 10px;
+        margin-left: 10px; /* Ajustement pour smartphones */
     }
-
     .category {
-        padding: 8px 16px; /* Réduit le padding pour smartphones */
+        padding: 8px 16px; /* Ajustement pour smartphones */
     }
-
     .dropdown-content a {
         font-size: 14px; /* Amélioration de la lisibilité */
         color: #000;
     }
-
-    .column {
-        width: 100%; /* Pleine largeur sur smartphones */
-    }
 }
 
-/* Gestion de la visibilité du menu sur mobile */
-.dropdown-content.is-active {
-    display: block; /* Assure que les sous-menus sont affichés sur mobile */
+.toggle-icon {
+    margin-right: 5px;
 }
 
-/* Boutons réactifs */
 .btn-responsive {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 24px; /* Adapté */
     background-color: #007bff;
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: calc(10px + 1vw); /* Police dynamique */
+    font-size: calc(10px + 1vw); /* Taille de police adaptable */
 }
 
 .btn-responsive:hover {
     background-color: #0056b3;
 }
 
-/* Image du menu */
 .menu-image {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    display: block; /* Pour centrer l'image si nécessaire */
+    margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
 }
 
-/* Ajustement pour images sur de petits écrans */
+/* Exemple de media query pour ajuster le style de l'image sur de petits écrans */
 @media (max-width: 600px) {
     .menu-image {
-        width: 100%; /* Image pleine largeur sur smartphone */
+        width: 100%; /* Pleine largeur pour les images sur smartphones */
     }
 }

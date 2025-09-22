@@ -25,32 +25,45 @@
 <!--Fin Menu-->        
 </header>
 
-<div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" class="button2" onclick="hideStartScreen()"><p style="text-decoration: underline;">Jeu de Correspondances &#x1F59D;</p><br>
-        <p style="text-align: left; color: #000;">À travers ce jeu, tu vas associer chaque personnage ou groupe mentionné dans le texte à une action ou 
-            une circonstance qui leur est attribuée.<br> Ces le livre d'Esdras. Mais pas seulment.<br>Ces chapitre parlent de la proclamation du roi Cyrus de Perse, qui autorise le retour des exilés juifs à Jérusalem pour reconstruire le temple de Jéhovah, conformément à la parole transmise par Jérémie, et de la restitution des ustensiles du temple.
-        </p>
-    </button>
+<div id="start-screen" class="start-screen">
+  <button id="start-button" class="button2" onclick="hideStartScreen()">
+    <span style="text-decoration: underline;">Jeu de Correspondances &#x1F59D;</span>
+  </button>
+
+  <div class="intro-text">
+    <p>
+      À travers ce jeu, tu vas associer chaque personnage<br>  
+      ou groupe mentionné dans le texte à une action ou<br>  
+      une circonstance qui leur est attribuée.<br> 
+      C’est le livre d'Esdras. Mais pas seulement.<br>
+      Ces chapitres parlent de la proclamation du roi Cyrus de Perse,<br>  
+      qui autorise le retour des exilés juifs à Jérusalem<br>  
+      pour reconstruire le temple de Jéhovah,<br>  
+      conformément à la parole transmise par Jérémie,<br>  
+      et de la restitution des ustensiles du temple.
+    </p>
   </div>
+</div>
+  
   <div id="wrapper">
     <div id="display-container">
       <h1>1 Jeu de Correspondances </h1>
       <div class="header">
         <div class="number-of-count">
           <span class="number-of-question"></span>
+            </div>
+              <div class="timer-div">
+                  <img src="https://svgshare.com/i/iRM.svg" alt="">
+                <span class="time-left"></span>
+              </div>
         </div>
-        <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
-          <span class="time-left"></span>
-        </div>
+          <div id="container">
+            <!-- Question and options are displayed here -->
+          </div>
+            <div class="btn-container">
+              <button id="next-button">Question suivante</button>
+            </div>
       </div>
-      <div id="container">
-        <!-- Question and options are displayed here -->
-      </div>
-      <div class="btn-container">
-        <button id="next-button">Question suivante</button>
-      </div>
-    </div>
     <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->
   </div>
   <div class="score-container hide">

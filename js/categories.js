@@ -2,20 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const categories = [
     // Exemples de catégories avec sous-catégories et sous-sous-catégories (comme avant)
     {
-      name: "Bible",
-      subcategories: [
+      name: "Genèse",
+     subcategories: [
         {
           name: "Genèse",
-          subSubcategories: [
+         subSubcategories: [
             { name: "1 - Genèse", url: "./BIBLE/1Genese/1_genese.html" },
             { name: "2 - Genèse", url: "./BIBLE/1Genese/2_genese.html" },
             { name: "3 - Genèse", url: "./BIBLE/1Genese/3_genese.html" }
           ]
         },
+      ]
+    },
+ //2   
+    {
+      name: "Bible",
+     subcategories: [
         {
-          name: "Josué",
+          name: "Exode",
           subSubcategories: [
-            { name: "Josué ch. 1", url: "./BIBLE/5Josue/1_josue.html" }
+            { name: "1 Exode", url: "./BIBLE/5Josue/1_exode.html" }
           ]
         },
         {
@@ -25,6 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "Psaume 18", url: "./BIBLE/4Psaumes/18em_Psaumes.html" }
           ]
         }
+      ]
+    },
+ //3   
+    {
+      name: "Bible",
+     subcategories: [
+        {
+          name: "Josué",
+          subSubcategories: [
+            { name: "Josué ch. 1", url: "./BIBLE/5Josue/1_josue.html" }
+          ]
+        },
       ]
     },
     // Ajouter les autres catégories ici

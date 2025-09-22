@@ -26,13 +26,26 @@
 </header>
 
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" onclick="hideStartScreen()" class="button">Vrai ou faux<br>
-      <p style="text-align: center;">
-        Dans ce jeu, je vais te présenter une série de dix énoncés Vrai ou Faux basés sur un texte spécifique. Ton objectif est de déterminer si chaque énoncé est vrai ou faux, en te basant uniquement sur les informations fournies dans le texte. Pour t'aider, je te donnerai quatre indices pour chaque question. Ces indices sont conçus pour te guider vers la bonne réponse, mais fais attention, certains peuvent être trompeurs.
-      </p><br>
-       Prêt ? Commençons! &#x1F59D;
-    </button>
-  </div>
+  <!-- Bouton avec le titre -->
+  <button id="start-button" onclick="hideStartScreen()" class="button"
+          style="margin: 0px auto 0 auto; display: block; width: 14cm; text-align: center; padding: 10px;">
+    Vrai ou faux &#x1F59D;
+  </button>
+
+  <!-- Texte explicatif -->
+  <p style="width: 14cm; margin: 1em auto; text-align: justify; color: #000;
+            background-color: #fff; padding: 12px; border-radius: 8px;">
+    Dans ce jeu, je vais te présenter une série de dix énoncés **Vrai ou Faux** basés sur un texte spécifique.  
+    Ton objectif est de déterminer si chaque énoncé est vrai ou faux, en te basant uniquement sur les informations fournies dans le texte.  
+    Pour t'aider, je te donnerai quatre indices pour chaque question. Ces indices sont conçus pour te guider vers la bonne réponse, mais fais attention, certains peuvent être trompeurs.  
+  </p>
+
+  <!-- Petit encouragement -->
+  <p style="width: 14cm; margin: 0 auto; text-align: center; font-weight: bold; color: #000;">
+    Prêt ? Commençons ! 🚀
+  </p>
+</div>
+  
   <div id="wrapper">
     <div id="display-container">
       <h1>Vrai ou faux</h1>
@@ -41,7 +54,7 @@
           <span class="number-of-question"></span>
         </div>
         <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
+          <img src="https://svgshare.com/i/iRM.svg" alt="&">
           <span class="time-left"></span>
         </div>
       </div>

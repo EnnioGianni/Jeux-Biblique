@@ -26,12 +26,19 @@
 </header>
 
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" onclick="hideStartScreen()" class="button1"><p style="text-decoration: underline;">Quiz Bibliques &#x1F59D;</p><br>
-        <p style="text-align: center; color: #000;">Plongez-vous dans un défi biblique captivant avec ce quiz exigeant, où chaque question est conçue pour 
-            mettre à l'épreuve même les connaisseurs les plus passionnés, en proposant des énigmes subtiles assorties de références précises de la Bible.
-        </p>
-    </button>
-  </div>
+  <button id="start-button" onclick="hideStartScreen()" class="button1"
+          style="margin: 0px auto 0 auto; display: block; width: 12cm; text-align: center; padding: 10px;">
+    <span style="text-decoration: underline;">Quiz Bibliques &#x1F59D;</span>
+  </button>
+
+  <p style="width: 12cm; margin: 1em auto; text-align: justify; color: #000;
+            background-color: #fff; padding: 10px; border-radius: 8px;">
+    Plongez-vous dans un défi biblique captivant avec ce quiz exigeant, où chaque question est conçue 
+    pour mettre à l'épreuve même les connaisseurs les plus passionnés, en proposant des énigmes subtiles 
+    assorties de références précises de la Bible.
+  </p>
+</div>
+  
   <div id="wrapper">
     <div id="display-container">
       <h1>1 Quiz Bibliques</h1>
@@ -40,7 +47,7 @@
           <span class="number-of-question"></span>
         </div>
         <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
+          <img src="https://svgshare.com/i/iRM.svg" alt="&">
           <span class="time-left"></span>
         </div>
       </div>

@@ -26,12 +26,19 @@
   </header>
 
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" class="button2" onclick="hideStartScreen()" style="margin: 350px 500px 0 500px;"><p style="text-decoration: underline;">Jeu de devinettes &#x1F59D;</p><br>
-        <p style="text-align: left; color: #000;">Une devinette, c'est une question ludique qui propose un défi intellectuel. Elle donne des indices sur 
-            quelque chose ou quelqu'un et vous demande de deviner la réponse. C'est un jeu de réflexion amusant qui stimule l'esprit.
-        </p>
-    </button>
-  </div>
+  <button id="start-button" class="button2" onclick="hideStartScreen()" 
+          style="margin: 350px auto 0 auto; display: block; width: 10cm; text-align: center;">
+    <span style="text-decoration: underline;">Jeu de devinettes &#x1F59D;</span>
+  </button>
+
+  <p style="width: 10cm; margin: 1em auto; text-align: justify; color: #000;">
+    Une devinette, c'est une question ludique qui propose un défi intellectuel.  
+    Elle donne des indices sur quelque chose ou quelqu'un et vous demande de deviner la réponse.  
+    C'est un jeu de réflexion amusant qui stimule l'esprit.
+  </p>
+</div>
+
+
   <div id="wrapper">
     <div id="display-container">
       <h1>1 Jeu de devinettes</h1>
@@ -40,7 +47,7 @@
           <span class="number-of-question"></span>
         </div>
         <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
+          <img src="https://svgshare.com/i/iRM.svg" alt="&">
           <span class="time-left"></span>
         </div>
       </div>

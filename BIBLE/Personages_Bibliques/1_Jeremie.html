@@ -24,45 +24,54 @@
 </nav>
 <!--Fin Menu-->        
 </header>
+
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" class="button2" onclick="hideStartScreen()" style="margin: 280px 400px 0 900px;">
-    <h4>Jérémie</h4>
-        <p style="text-align: left; color: #000;">
-         Jérémie fut non seulement un prophète, mais aussi un investigateur et un historien. Il écrivit le livre qui porte son nom et on lui attribue     généralement la rédaction de Un et Deux Rois, qui relatent l’histoire des deux royaumes (Juda et Israël) depuis le moment où s’arrêtent les livres de Samuel (c’est-à-dire dans la dernière partie du règne de David sur tout Israël) jusqu’à la fin des deux royaumes.
-          </p><br>
-          <p style="text-decoration: underline;">Questions sur le prophète Jérémie &#x1F59D;</p> <br>    
-    </button>
-  </div>
+  <button id="start-button" onclick="hideStartScreen()" 
+          style="margin: 0px auto 0 auto; display: block; width: 12cm; text-align: center; padding: 10px;">
+    <span style="display: block; font-weight: bold; font-size: 1.2em; margin-bottom: 6px;">
+      Jérémie &#x1F59D;
+    </span>
+    <span style="display: block; text-decoration: underline; font-size: 1em; color: #000;">
+  
+    </span>
+  </button>
+
+  <p style="width: 12cm; margin: 1em auto; text-align: justify; color: #000;
+            background-color: #fff; padding: 10px; border-radius: 8px;">
+    Jérémie fut non seulement un prophète, mais aussi un investigateur et un historien. 
+    Il écrivit le livre qui porte son nom et on lui attribue généralement la rédaction de 
+    Un et Deux Rois, retraçant l’histoire des royaumes de Juda et d’Israël depuis la fin du règne de David 
+    jusqu’à leur chute.
+  </p>
+</div>
+
+
   <div id="wrapper">
     <div id="display-container">
-      <h1>Questions sur le prophète Jérémie</h1>
+      <h1>Jérémie</h1>
       <div class="header">
         <div class="number-of-count">
           <span class="number-of-question"></span>
         </div>
         <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
+          <img src="https://svgshare.com/i/iRM.svg" alt="&">
           <span class="time-left"></span>
         </div>
       </div>
       <div id="container">
-        <!-- La question et les options sont affichées ici -->
+        <!-- Question and options are displayed here -->
       </div>
-
-      <div class="btn-wrapper">
-        <button class="btn" id="back-button">&#128412; Retour</button>
-        <button class="btn" id="next-button">Suivante &#128413;</button>
+      <div class="btn-container">
+        <button id="next-button">Question suivante</button>
       </div>
-
     </div>
-    <!-- <a href="../../score.html">Maquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a> -->
+    <!-- <a href="#">Série de questions suivantes&nbsp;<i class="fab fa-youtube"></i></a> -->
   </div>
   <div class="score-container hide">
     <div id="user-score"></div>
     <button id="restart">Redémarrer</button>
-    <a href="../../categories.html" style="width: auto; height: 45px; padding: 15px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
+    <a href="../../categories.html" style="width: auto; height: 45px; padding: 10px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
     <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
   </div>
-
 </body>
 </html>

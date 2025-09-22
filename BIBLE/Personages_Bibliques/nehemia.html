@@ -25,14 +25,27 @@
 <!--Fin Menu-->        
 </header>
 <div id="start-screen" class="start-screen"> <!-- Ajout de l'ID ici -->
-  <button id="start-button" onclick="hideStartScreen()" style="margin: -380px 400px 0 400px;">
-    <h4>Nehémia</h4>
-        <p style="text-align: left; font-size: 20px; color: #000;">
-            Certains documents sur papyrus rédigés en araméen ont été retrouvés à Éléphantine, une île égyptienne située sur le Nil. Ces documents prouvent l’exactitude avec laquelle Esdras et Néhémie, rédacteurs bibliques, décrivent les conditions qui régnaient dans l’Empire perse et ce que pouvaient être les décrets officiels à cette époque. 
-          </p>
-          <p style="text-decoration: underline; font-size: 20px;">Questions sur le prophète Nehémia &#x1F59D;</p> <br>    
-    </button>
-  </div>
+  <!-- Bouton avec deux lignes -->
+  <button id="start-button" onclick="hideStartScreen()" 
+          style="margin: 0px auto 0 auto; display: block; width: 12cm; text-align: center; padding: 10px;">
+    <span style="display: block; font-weight: bold; font-size: 1.2em; margin-bottom: 6px;">
+      Néhémie &#x1F59D;
+    </span>
+    <span style="display: block; text-decoration: underline; font-size: 1em; color: #000;">
+  
+    </span>
+  </button>
+
+  <!-- Paragraphe explicatif -->
+  <p style="width: 12cm; margin: 1em auto; text-align: justify; font-size: 18px; color: #000;
+            background-color: #fff; padding: 10px; border-radius: 8px;">
+    Certains documents sur papyrus rédigés en araméen ont été retrouvés à Éléphantine, 
+    une île égyptienne située sur le Nil. Ces documents prouvent l’exactitude avec laquelle 
+    Esdras et Néhémie, rédacteurs bibliques, décrivent les conditions qui régnaient dans 
+    l’Empire perse et ce que pouvaient être les décrets officiels à cette époque.
+  </p>
+</div>
+
   <div id="wrapper">
     <div id="display-container">
       <h1>Questions sur le prophète Nehémia</h1>
@@ -41,7 +54,7 @@
           <span class="number-of-question"></span>
         </div>
         <div class="timer-div">
-          <img src="https://svgshare.com/i/iRM.svg" />
+          <img src="https://svgshare.com/i/iRM.svg" alt="&">
           <span class="time-left"></span>
         </div>
       </div>
@@ -63,6 +76,5 @@
     <a href="../../categories.html" style="width: auto; height: 45px; padding: 15px 40px 0px 40px; text-align: center;">Questions suivantes&nbsp;<i class="fab fa-youtube"></i></a>
     <a href="../../score.html">Si vous jouer a plusieurs, marquez vos points ici et continuez à jouer&nbsp;<i class="fab fa-youtube"></i></a>
   </div>
-
 </body>
 </html>
